@@ -1,7 +1,7 @@
 # Cogip
 Tess, Maoro, Huseyin, Giusepe, Nico
 
-1. Installez Composer localement dans votre projet
+1. Installez Composer sur votre machine
 2. Installez les dépendances définies dans le fichier composer.json
 composer install
 3. Assurez-vous d'avoir un fichier .env à la racine de votre projet avec vos variables d'environnement.
