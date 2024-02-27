@@ -1,0 +1,9 @@
+# Composer
+/vendor/
+/composer.phar
+/composer.lock
+/composer.json
+/composer.lock
+
+# Dotenv
+.env
