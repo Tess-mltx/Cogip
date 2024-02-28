@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 28 fév. 2024 à 12:26
+-- Généré le : mer. 28 fév. 2024 à 15:03
 -- Version du serveur : 10.5.20-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -37,6 +37,23 @@ CREATE TABLE `companies` (
   `update_dat` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Déchargement des données de la table `companies`
+--
+
+INSERT INTO `companies` (`id`, `name`, `type_id`, `country`, `tva`, `created_at`, `update_dat`) VALUES
+(1, 'Becode', NULL, 'Belgique', 'BE0012345678', '2024-02-28 14:23:33', '2024-02-28 14:23:33'),
+(2, 'InnovateTech Solutions', NULL, 'Belgique', 'BE0023456789', '2024-02-28 14:24:22', '2024-02-28 14:24:22'),
+(3, 'BlueSky Enterprises', NULL, 'Belgique', 'BE0034567890', '2024-02-28 14:24:22', '2024-02-28 14:24:22'),
+(4, 'Quantum Dynamics Ltd.', NULL, 'Espagne', 'ES0045678901', '2024-02-28 14:25:25', '2024-02-28 14:25:25'),
+(5, 'VistaCraft Innovations', NULL, 'Espagne', 'ES0056789012', '2024-02-28 14:25:25', '2024-02-28 14:25:25'),
+(6, 'StellarSynth Technologies', NULL, 'Espagne', 'ES0067890123', '2024-02-28 14:26:49', '2024-02-28 14:26:49'),
+(7, 'Nexus Ventures Group', NULL, 'Lituanie', 'BE0078901234', '2024-02-28 14:26:49', '2024-02-28 14:26:49'),
+(8, 'AlphaMatrix Solutions', NULL, 'Lituanie', 'LT0089012345', '2024-02-28 14:27:54', '2024-02-28 15:03:06'),
+(9, 'Zenith Global Innovations', NULL, 'Lituanie', 'LT0090123456', '2024-02-28 14:27:54', '2024-02-28 14:27:54'),
+(10, 'Horizon Nexus Industries', NULL, 'Allemagne', 'DE0011122334', '2024-02-28 14:28:42', '2024-02-28 14:28:42'),
+(11, 'FusionWave Systems', NULL, 'Allemagne', 'DE0012233445', '2024-02-28 14:28:42', '2024-02-28 14:28:42');
+
 -- --------------------------------------------------------
 
 --
@@ -53,6 +70,23 @@ CREATE TABLE `contacts` (
   `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Déchargement des données de la table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `name`, `email`, `company_id`, `phone`, `created_at`, `updated_at`) VALUES
+(1, 'Alice Dubois', 'alice.dubois@becode.be', 1, '071/ 31 32 33', '2024-02-28 14:31:31', '2024-02-28 14:31:31'),
+(2, 'Julien Martin', 'julien.martin@innovtech.be', 2, '071/ 43 65 87', '2024-02-28 14:31:31', '2024-02-28 14:31:31'),
+(3, 'Emilie Leroy', 'emilie.leroy@bsky.be', 3, '071/54 21 93', '2024-02-28 14:33:40', '2024-02-28 14:33:40'),
+(4, 'Nicolas Lefevre', 'nicolas.lefevre@qdynamics.be', 4, '054/ 43 65 90', '2024-02-28 14:33:40', '2024-02-28 14:33:40'),
+(5, 'Laura Dupont', 'laura.dupont@vci.es', 5, '054/ 54 67 76', '2024-02-28 14:35:50', '2024-02-28 14:35:50'),
+(6, 'Victor Lambert', 'victor.lambert@sstn.es', 6, '054/ 32 14 23', '2024-02-28 14:35:50', '2024-02-28 14:35:50'),
+(7, 'Chloé Rousseau', 'chloé.rousseau@nexusgroup.lt', 7, '099/ 56 43 78', '2024-02-28 14:38:50', '2024-02-28 14:38:50'),
+(8, 'Gabriel Moreau', 'gabriel.moreau@ams.lt', 8, '099/ 78 93 42', '2024-02-28 14:38:50', '2024-02-28 14:38:50'),
+(9, 'Emma Berger', 'emma.berger@globalinnov.lt', 9, '099/ 89 97 54', '2024-02-28 14:42:39', '2024-02-28 14:42:39'),
+(10, 'Mathis Perrin', 'mathis.perrin@hni.de', 10, '010/ 44 55 77', '2024-02-28 14:42:39', '2024-02-28 14:42:39'),
+(11, 'Alexis Lamenace', 'alexis.lamenace@fusionwsyst.de', 11, '010/ 87 54 24', '2024-02-28 14:43:46', '2024-02-28 14:43:46');
+
 -- --------------------------------------------------------
 
 --
@@ -66,6 +100,23 @@ CREATE TABLE `invoices` (
   `created_at` datetime DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Déchargement des données de la table `invoices`
+--
+
+INSERT INTO `invoices` (`id`, `ref`, `company_id`, `created_at`, `updated_at`) VALUES
+(1, 'INV2022001', 1, '2024-02-28 14:54:04', '2024-02-28 14:54:04'),
+(2, 'FACT-458912', 2, '2024-02-28 14:54:04', '2024-02-28 14:54:04'),
+(3, '2022-FAC-00789', 3, '2024-02-28 14:54:30', '2024-02-28 14:54:30'),
+(4, 'RF210356', 4, '2024-02-28 14:54:30', '2024-02-28 14:54:30'),
+(5, 'INV-12345', 5, '2024-02-28 14:55:29', '2024-02-28 14:55:29'),
+(6, 'FACTURE-89021', 6, '2024-02-28 14:55:29', '2024-02-28 14:55:29'),
+(7, '2022-INV-5432', 7, '2024-02-28 14:55:48', '2024-02-28 14:55:48'),
+(8, 'RF-789012', 8, '2024-02-28 14:55:48', '2024-02-28 14:55:48'),
+(9, 'INV2202-67890', 9, '2024-02-28 14:56:06', '2024-02-28 14:56:06'),
+(10, 'FACT-112233', 10, '2024-02-28 14:56:06', '2024-02-28 14:56:06'),
+(11, 'INV-87432', 11, '2024-02-28 14:56:39', '2024-02-28 14:56:39');
 
 -- --------------------------------------------------------
 
@@ -136,6 +187,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `role_id`, `email`, `password`, `created_at`, `updated_at`) VALUES
+(1, 'Jean-Christian', 'Ranu', NULL, 'j-c.ranu@cogip.be', 'v4N1qu3rT4M3r3', '2024-02-28 14:48:47', '2024-02-28 14:48:47'),
+(2, 'Harry', 'Potter', NULL, 'harry.potter@cogip.be', 'j3V1ss0usl35c4l13r', '2024-02-28 14:48:47', '2024-02-28 14:48:47');
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -202,19 +261,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `companies`
 --
 ALTER TABLE `companies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `permissions`
@@ -244,7 +303,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Contraintes pour les tables déchargées
