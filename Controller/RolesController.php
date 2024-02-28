@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class rolesController {
+class RolesController {
     public function index() {
         $roles = $this->getRoles();
 

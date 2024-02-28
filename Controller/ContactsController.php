@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class contactsController {
+class ContactsController {
     public function index()
     {
         $contacts = $this->getContacts();
