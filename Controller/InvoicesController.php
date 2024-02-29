@@ -30,7 +30,7 @@ class InvoicesController
     public function home() {
         require 'Connect/Cogip.php';
 
-        $rawinvoices = [];
+        $rawInvoices = [];
         $statement = $bdd->prepare('SELECT id, ref, company_id, created_at FROM invoices ORDER BY created_at DESC LIMIT 5');
         $statement->execute();
         $rawInvoices = $statement->fetchAll();

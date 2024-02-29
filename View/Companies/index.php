@@ -1,10 +1,8 @@
-<?php
+<?php require 'View/includes/header.php' ?>
+
+
+
 // liste de toutes les compagnies
-require 'View/includes/header.php' ?>
-
-
-
-
 
 
 
