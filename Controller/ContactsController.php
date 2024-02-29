@@ -7,21 +7,21 @@ class ContactsController {
     {
         $contacts = $this->getContacts();
 
-        require("jsp quelle vue");
+        require('View/Contacts/index.php');
     }
 
     private function getContacts()
     {
         require('Connect/Cogip.php');
 
-        $req = $pdo->prepare('SELECT * FROM contacts');
+        $req = $bdd->prepare('SELECT * FROM contacts');
         $req->execute();
         $rawContacts = $req->fetchAll();
 
         $contacts = [];
 
         foreach ($rawContacts as $rawContact) {
-            $contacts[] = new Contacts($rawContact['name'], $rawContact['email'], $rawContact['phone']);
+            $contacts[] = new Contacts($rawContact['name'], $rawContact['email'], $rawContact['phone'], $rawContact['company_id'], $rawContact['created_at']);
         }
 
         return $contacts;
