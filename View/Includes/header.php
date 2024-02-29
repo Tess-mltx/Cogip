@@ -9,7 +9,7 @@
 <body>
 
 <!-- Barre de navigation -->
-<nav class="bg-orange-600 text-white py-4">
+<nav class="bg-#FE6402-600 text-white py-4">
     <div class="container mx-auto flex justify-between items-left">
         <!-- Première division pour le premier onglet -->
         <div class="border border-white rounded px-2 mt-1">
@@ -33,7 +33,7 @@
 </nav>
 
 <!-- Section sous la barre de navigation -->
-<section class="bg-orange-600 py-8 flex items-center">
+<section class="bg-#FE6402-600 py-8 flex items-center">
     <div class="container mx-auto flex items-center justify-between">
         <!-- Texte à gauche -->
         <div class="text-left text-white flex-1 px-4">
