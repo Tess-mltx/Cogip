@@ -5,5 +5,8 @@
 /composer.json
 /composer.lock
 
+
 # Dotenv
 .env
+
+/node_modules
