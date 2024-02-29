@@ -14,14 +14,14 @@ class InvoicesController
         require 'Connect/Cogip.php';
 
         $rawinvoices = [];
-        $statement = $bdd->prepare('SELECT reference, company_name, date FROM invoices'); // TO CONFIRM
+        $statement = $bdd->prepare('SELECT ref, company_id, created_at FROM invoices'); // TO CONFIRM
         $statement->execute();
         $rawInvoices = $statement->fetchAll();
             
         $invoices = [];
         foreach ($rawInvoices as $rawInvoice) 
         {
-            $invoices[] = new Invoices($rawInvoice['reference'], $rawInvoice['company_name'], $rawInvoice['date']);
+            $invoices[] = new Invoices($rawInvoice['ref'], $rawInvoice['company_id'], $rawInvoice['created_at']);
         }
 
         return $invoices;
