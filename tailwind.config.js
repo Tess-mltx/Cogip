@@ -6,13 +6,13 @@ module.exports = {
       colors: {
         'primary-color-orange': '#FE6402'
       },
-      spacing: {
-        '543': '543px',
-        '1193': '1193px',
-      },
-      fontFamily: {
-        'sans': ['"Poppins"', ...defaultTheme.fontFamily.sans],
-      }
+      // spacing: {
+      //   '543': '543px',
+      //   '1193': '1193px',
+      // },
+      // fontFamily: {
+      //   'sans': ['"Poppins"', ...defaultTheme.fontFamily.sans],
+      // }
     },
   },
   plugins: [],
