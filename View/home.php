@@ -11,7 +11,7 @@
             </div>
             <!-- Image SVG à droite -->
             <div class="flex-1">
-                <img src="../../img/image/Investment data-amico.svg" alt="Image" class="w-full h-auto">
+                <img src="img/image/Investment data-amico.svg" alt="Image" class="w-full h-auto">
             </div>
         </div>
     </section>
