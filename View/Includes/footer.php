@@ -26,11 +26,11 @@
             </div>
             <div class="w-full flex justify-between bg-gray-200">
                 <ul class="flex flex-wrap">
-                    <li class="mr-5"><a href="#">home</a></li>
-                    <li class="mr-5"><a href="#">invoices</a></li>
-                    <li class="mr-5"><a href="#">companies</a></li>
-                    <li class="mr-5"><a href="#">contact</a></li>
-                    <li class="mr-5"><a href="#">privacy policy</a></li>
+                    <li class="mr-5"><a href="index.php?page=">home</a></li>
+                    <li class="mr-5"><a href="index.php?page=invoices-index">invoices</a></li>
+                    <li class="mr-5"><a href="index.php?page=companies-index">companies</a></li>
+                    <li class="mr-5"><a href="index.php?page=contacts-index">contact</a></li>
+                    <li class="mr-5"><a href="index.php?page=">privacy policy</a></li>
                 </ul>
                 <div>copyright &copy; 2024 Cojip inc.</div>
             </div>
