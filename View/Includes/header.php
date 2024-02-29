@@ -18,10 +18,10 @@
 
         <!-- Les onglets -->
         <div class="flex space-x-10 ml-8 mt-6"> <!-- Décalage des onglets -->
-            <a href="index.php?page=companies-index" class="nav-link hover:text-black hover:bg-white rounded md hover:px-1.5">Home</a> <!-- Effets hover ajoutés -->
+            <a href="#" class="nav-link hover:text-black hover:bg-white rounded md hover:px-1.5">Home</a> <!-- Effets hover ajoutés -->
             <a href="#" class="nav-link hover:text-black hover:bg-white rounded md hover:px-1.5">Invoices</a> <!-- Effets hover ajoutés -->
-            <a href="#" class="nav-link hover:text-black hover:bg-white rounded md hover:px-1.5">Companies</a> <!-- Effets hover ajoutés -->
-            <a href="#" class="nav-link hover:text-black hover:bg-white rounded md hover:px-1.5">Contact</a> <!-- Effets hover ajoutés -->
+            <a href="index.php?page=companies-index" class="nav-link hover:text-black hover:bg-white rounded md hover:px-1.5">Companies</a> <!-- Effets hover ajoutés -->
+            <a href="index.php?page=contacts-index" class="nav-link hover:text-black hover:bg-white rounded md hover:px-1.5">Contact</a> <!-- Effets hover ajoutés -->
         </div>
 
         <!-- Deuxième division pour les onglets "Sign Up" et "Login" -->
