@@ -1,13 +1,8 @@
 <?php
-require 'vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
-$servername = getenv('DB_HOST');
-$username = getenv('DB_USER');
-$password = getenv('DB_PASSWORD');
-$dbname = getenv('DB_NAME');
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "cogip";
 
 try {
     $bdd = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
