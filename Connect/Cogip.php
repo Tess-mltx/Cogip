@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "cogip";
+$dbname = "id21932715_good_cogip";
 
 try {
     $bdd = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
