@@ -1,11 +1,8 @@
 <?php require 'View/includes/header.php' ?>
-
-// liste de toutes les factures
-
-  <!-- section_table_last_invoices -->
+  <!-- section_table_invoices -->
   <section>
         <h2>last invoices</h2>
-        <!-- table n°1 : last invoices -->
+        <!-- table : invoices -->
         <table class="w-8/12 ">
             <thead class="bg-primary-color-orange">
                 <tr>
@@ -27,14 +24,7 @@
 
             </tbody>
         </table>
-        <!-- table n°1 : last invoices_end -->
+        <!-- table : invoices_end -->
     </section>
-    <!-- section_table_last_invoices_end -->
-
-
-
-
-
-
-
+    <!-- section_table_invoices_end -->
 <?php require 'View/includes/footer.php' ?>

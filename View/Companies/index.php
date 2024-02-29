@@ -1,11 +1,7 @@
 <?php require 'View/includes/header.php' ?>
-
-
-
-// liste de toutes les compagnies
 <section>
-        <h2>last companies</h2>
-        <!-- table n°3 : last companies -->
+        <h2>Companies</h2>
+        <!-- table : companies -->
         <table class="w-8/12">
             <thead class="bg-primary-color-orange">
                 <tr>
@@ -28,12 +24,7 @@
 
             </tbody>
         </table>
-        <!-- table n°3 : last companies_end -->
+        <!-- table : companies_end -->
     </section>
-    <!-- section_table_last_companies_end -->   
-
-
-
-
-
+    <!-- section_table_companies_end -->   
 <?php require 'View/includes/footer.php' ?>

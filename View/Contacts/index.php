@@ -1,13 +1,8 @@
 <?php require 'View/includes/header.php' ?>
-
-// liste de tout les contacts
-
-
-
-    <!-- section_table_last_contacts -->
+    <!-- section_table_contacts -->
     <section>
         <h2>last contacts</h2>
-        <!-- table n°2 : last contacts -->
+        <!-- table : contacts -->
         <table class="w-8/12">
             <thead class="bg-primary-color-orange">
                 <tr>
@@ -36,8 +31,4 @@
         <!-- table n°2 : last contacts_end -->
     </section>
     <!-- section_table_last_contacts_end -->
-
-
-
-
 <?php require 'View/includes/footer.php' ?>
