@@ -16,7 +16,7 @@ require 'Model/Roles.php';
 require 'Model/Users.php';
 
 //include all your controllers here
-// require 'Controller/HomepageController.php'; Je dois voir pour ca
+require 'Controller/HomepageController.php';
 require 'Controller/CompaniesController.php';
 require 'Controller/ContactsController.php';
 require 'Controller/InvoicesController.php';
