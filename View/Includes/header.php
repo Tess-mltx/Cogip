@@ -7,7 +7,7 @@
     <link href="../../src/output.css" rel="stylesheet">
 </head>
 <body>
-
+<header>
 <!-- Barre de navigation -->
 <nav class="bg-primary-color-orange text-white py-4">
     <div class="container mx-auto flex justify-between items-left">
@@ -32,22 +32,8 @@
     </div>
 </nav>
 
-<!-- Section sous la barre de navigation -->
-<section class="bg-primary-color-orange py-8 flex items-center">
-    <div class="container mx-auto flex items-center justify-between">
-        <!-- Texte à gauche -->
-        <div class="text-left text-white flex-1 px-4">
-            <p class="text-6xl font-semibold">MANAGE YOUR CUSTOMERS AND&nbsp;INVOICES EASILY</p>
-        </div>
-        <!-- Image SVG à droite -->
-        <div class="flex-1">
-            <img src="../../img/image/Investment data-amico.svg" alt="Image" class="w-full h-auto">
-        </div>
-    </div>
-</section>
+</header>
 
-</body>
-</html>
 
 
 
