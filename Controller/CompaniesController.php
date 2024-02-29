@@ -35,4 +35,38 @@ class CompaniesController
 
         return $companies;
     }
+
+    public function singleCompany($id) {
+        require 'Connect/Cogip.php';
+
+        $rawCompanies = [];
+        $statement = $bdd->prepare("SELECT name, country, tva, created_at FROM companies WHERE id = $id"); // TO CONFIRM
+        $statement->execute();
+        $rawCompanies = $statement->fetchAll();
+            
+        $companies = [];
+        foreach ($rawCompanies as $rawCompagny) 
+        {
+            $companies[] = new Companies($rawCompagny['name'], $rawCompagny['country'], $rawCompagny['tva'], $rawCompagny['created_at']);
+        }
+
+        return $companies;
+    }
+    
+    public function home()
+    {
+        require 'Connect/Cogip.php';
+
+        $statement = $bdd->prepare('SELECT name, country, tva, created_at FROM companies ORDER BY created_at DESC LIMIT 5'); // TO CONFIRM
+        $statement->execute();
+        $rawCompanies = $statement->fetchAll();
+            
+        $companies = [];
+        foreach ($rawCompanies as $rawCompagny) 
+        {
+            $companies[] = new Companies($rawCompagny['name'], $rawCompagny['country'], $rawCompagny['tva'], $rawCompagny['created_at']);
+        }
+
+        return $companies;
+    }
 }

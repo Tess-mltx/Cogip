@@ -26,4 +26,21 @@ class InvoicesController
 
         return $invoices;
     }
+
+    public function home() {
+        require 'Connect/Cogip.php';
+
+        $rawinvoices = [];
+        $statement = $bdd->prepare('SELECT id, ref, company_id, created_at FROM invoices ORDER BY created_at DESC LIMIT 5');
+        $statement->execute();
+        $rawInvoices = $statement->fetchAll();
+
+        $invoices = [];
+        foreach ($rawInvoices as $rawInvoice) 
+        {
+            $invoices[] = new Invoices($rawInvoice['id'], $rawInvoice['ref'], $rawInvoice['company_id'], $rawInvoice['created_at']);
+        }
+
+        return $invoices;
+    }
 }
