@@ -9,9 +9,6 @@ module.exports = {
       spacing: {
         '543': '543px',
         '1193': '1193px',
-      },
-      fontFamily: {
-        'sans': ['"Poppins"', ...defaultTheme.fontFamily.sans],
       }
     },
   },
