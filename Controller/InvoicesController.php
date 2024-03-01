@@ -43,4 +43,17 @@ class InvoicesController
 
         return $invoices;
     }
+
+    public function showFromCompagnies()
+    {
+        $id = $_GET['id'] ?? null;
+        $contacts = $this->getInvoices();
+        $selectedArticles = [];
+        foreach ($contacts as $contact) {
+            if ($contact->company_id == $id) {
+                $selectedArticles[] = $contact;
+            }
+        }
+        return($selectedArticles);
+    }
 }
