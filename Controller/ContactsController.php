@@ -52,4 +52,30 @@ class ContactsController {
         $contact = $companies[$selectedCompanies];
         require 'View/Contacts/show.php';
     }
+
+    public function getContact($id)
+    {
+        require('Connect/Cogip.php');
+
+        $req = $bdd->prepare('SELECT * FROM contacts WHERE id = :id');
+        $req->execute(array('id' => $id));
+        $rawContact = $req->fetch();
+
+        $contact = new Contacts($rawContact['name'], $rawContact['email'], $rawContact['phone'], $rawContact['company_id'], $rawContact['created_at'], $rawContact['id']);
+
+        return $contact;
+    }
+
+    public function showFromCompagnies()
+    {
+        $id = $_GET['id'] ?? null;
+        $contacts = $this->getContacts();
+        $selectedArticles = [];
+        foreach ($contacts as $contact) {
+            if ($contact->company_id == $id) {
+                $selectedArticles[] = $contact;
+            }
+        }
+        return($selectedArticles);
+    }
 }

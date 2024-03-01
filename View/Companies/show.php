@@ -1,15 +1,13 @@
-<?php
-// au clic sur une compagnie, montre les détails de celle ci
-require 'View/includes/header.php' ?>
+<?php require 'View/includes/header.php'; $contacts = (new ContactsController())->showFromCompagnies(); $invoices = (new InvoicesController())->showFromCompagnies(); ?>
 
 <main>
     <section>
         <div>
-            <h1>Pied Pipper</h1>
+            <h1><?=$compagny->name?></h1>
             <div>
-                <p><span>Name:</span>Pied Pipper</p>
-                <p><span>TVA:</span>BE87 876 767 565</p>
-                <p><span>Country:</span>Belgium</p>
+                <p><span>Name: </span><?=$compagny->name?></p>
+                <p><span>TVA: </span><?=$compagny->tvaNumber?></p>
+                <p><span>Country: </span><?=$compagny->country?></p>
             </div>
         </div>
     </section>
@@ -17,16 +15,15 @@ require 'View/includes/header.php' ?>
     <section>
         <div>
             <h2>Contact people</h2>
-            <div>
+
+            <?php foreach($contacts as $cont) :?>   
                 <div>
-                    <img>
-                    <h3>Bertram <br> Gilfoyle</h3>
+                    <h3><?=$cont->name?></h3>
+                    <p><?=$cont->phone?></p>
+                    <p><?=$cont->email?></p>
                 </div>
-                <div>
-                    <img>
-                    <h3>Henry <br> George</h3>
-                </div>
-            </div>
+            <?php endforeach; ?>
+
         </div>
     </section>
 
@@ -43,13 +40,14 @@ require 'View/includes/header.php' ?>
             </thead>
             <tbody>
 
-               
+                <?php foreach ($invoices as $invoice) : ?>
+                <?php $company = (new CompaniesController())->singleCompany($invoice->company_id);?>
                     <tr>
-                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?=$invoice->reference?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?=$company[0]->name?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?=$invoice->created_at?></td>
                     </tr>
-               
+                <?php endforeach; ?>
 
             </tbody>
         </table>
