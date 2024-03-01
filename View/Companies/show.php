@@ -3,7 +3,7 @@
 require 'View/includes/header.php' ?>
 
 
-
+    <?php echo $compagny->name ?>
 
 
 

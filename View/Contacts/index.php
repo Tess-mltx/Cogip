@@ -18,7 +18,7 @@
                 <?php foreach ($contacts as $contact) : ?>
                     <?php $company = (new CompaniesController())->singleCompany($contact->company_id);?>
                     <tr>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $contact->name ?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><a href='index.php?page=contacts-show&id=<?=$contact->id?>'><?= $contact->name ?></a></td>
                         <td class="bg-sky-500/100 px-4 py-3 border"><?= $contact->phone ?></td>
                         <td class="bg-sky-500/100 px-4 py-3 border"> <?= $contact->email ?></td>
                         <td class="bg-sky-500/100 px-4 py-3 border"> <?= $company[0]->name ?></td>

@@ -21,7 +21,7 @@ class ContactsController {
         $contacts = [];
 
         foreach ($rawContacts as $rawContact) {
-            $contacts[] = new Contacts($rawContact['name'], $rawContact['email'], $rawContact['phone'], $rawContact['company_id'], $rawContact['created_at']);
+            $contacts[] = new Contacts($rawContact['name'], $rawContact['email'], $rawContact['phone'], $rawContact['company_id'], $rawContact['created_at'], $rawContact['id']);
         }
 
         return $contacts;
@@ -31,16 +31,25 @@ class ContactsController {
         require 'Connect/Cogip.php';
 
         $rawinvoices = [];
-        $statement = $bdd->prepare('SELECT name, email, phone, company_id, created_at FROM contacts ORDER BY created_at DESC LIMIT 5');
+        $statement = $bdd->prepare('SELECT id, name, email, phone, company_id, created_at FROM contacts ORDER BY created_at DESC LIMIT 5');
         $statement->execute();
         $rawContacts = $statement->fetchAll();
 
         $contacts = [];
         foreach ($rawContacts as $rawContact) 
         {
-            $contacts[] = new Contacts($rawContact['name'], $rawContact['email'], $rawContact['phone'], $rawContact['company_id'], $rawContact['created_at']);
+            $contacts[] = new Contacts($rawContact['name'], $rawContact['email'], $rawContact['phone'], $rawContact['company_id'], $rawContact['created_at'], $rawContact['id']);
         }
 
         return $contacts;
+    }
+
+    public function show()
+    {
+        $id = $_GET['id'] ?? null; // récupèrer le titre dans l'url
+        $companies = $this->getContacts();
+        $selectedCompanies = array_search($id,  array_column($companies, 'id'));
+        $contact = $companies[$selectedCompanies];
+        require 'View/Contacts/show.php';
     }
 }
