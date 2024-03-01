@@ -123,114 +123,58 @@
                 <div class="container_information col-span-1 row-span-1 border h-96 rounded-3xl w-11/12 cursor-pointer">
                     <div class="flex flex-col items-center my-10">
                         <h2 class="capitalize tracking-widest text-white font-bold">last invoices</h2>
-                        <table class="my-2 w-5/6">
-                            <thead>
-                                <tr>
-                                    <th class="px-4 py-2.5 border capitalize">invoice number</th>
-                                    <th class="px-4 py-2.5 border capitalize">company</th>
-                                    <th class="px-4 py-2.5 border capitalize">created at</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <table class="w-8/12 ">
+            <thead class="bg-primary-color-orange">
+                <tr>
+                    <th class="px-4 py-2.5 border">invoice number</th>
+                    <th class="px-4 py-2.5 border">company</th>
+                    <th class="px-4 py-2.5 border">created at</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <?php foreach ($invoices as $invoice) : ?>
+                <?php $company = (new CompaniesController())->singleCompany($invoice->company_id);?>
+                    <tr>
+                    <td class="bg-sky-500/100 px-4 py-3 border"><?= $invoice->reference ?></td>
+                    <td class="bg-sky-500/100 px-4 py-3 border"><?= $company[0]->name ?></td>
+                    <td class="bg-sky-500/100 px-4 py-3 border"><?= $invoice->created_at ?></td>
+                    </tr>
+                <?php endforeach; ?>
+
+            </tbody>
+        </table>
                     </div>
                 </div>
 
                 <div class="container_information col-span-1 row-span-1 border h-96 rounded-3xl w-11/12 cursor-pointer">
                     <div class="flex flex-col items-center my-10 ">
                         <h2 class="capitalize tracking-widest text-white font-bold">last contacts</h2>
-                        <table class="my-2 w-5/6">
-                            <thead>
-                                <tr>
-                                    <th class="px-4 py-2.5 border capitalize">name</th>
-                                    <th class="px-4 py-2.5 border capitalize">phone</th>
-                                    <th class="px-4 py-2.5 border capitalize">mail</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <table class="w-8/12">
+            <thead class="bg-primary-color-orange">
+                <tr>
+                    <th class="px-4 py-2.5 border">name</th>
+                    <th class="px-4 py-2.5 border">phone</th>
+                    <th class="px-4 py-2.5 border">mail</th>
+                    <th class="px-4 py-2.5 border">company</th>
+                    <th class="px-4 py-2.5 border">created at</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <?php foreach ($contacts as $contact) : ?>
+                    <?php $company = (new CompaniesController())->singleCompany($contact->company_id);?>
+                    <tr>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $contact->name ?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $contact->phone ?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"> <?= $contact->email ?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"> <?= $company[0]->name ?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"> <?= $contact->created_at ?></td>
+                    </tr>
+                <?php endforeach; ?>
+
+            </tbody>
+        </table>
                     </div>
                 </div>
                 <div
@@ -238,57 +182,28 @@
                     <div class="flex flex-col items-center my-10">
                         <h2 class="capitalize tracking-widest text-white font-bold">last companies</h2>
 
-                        <table class="my-2 w-5/6">
-                            <thead>
-                                <tr>
-                                    <th class="px-4 py-2.5 border capitalize">name</th>
-                                    <th class="px-4 py-2.5 border">TVA</th>
-                                    <th class="px-4 py-2.5 border capitalize">country</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                    <td class="bg-sky-500/100 px-4 py-3 border"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <table class="w-8/12">
+            <thead class="bg-primary-color-orange">
+                <tr>
+                    <th class="px-4 py-2.5 border">name</th>
+                    <th class="px-4 py-2.5 border">TVA</th>
+                    <th class="px-4 py-2.5 border">country</th>
+                    <th class="px-4 py-2.5 border">created at</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <?php foreach ($companies as $company) : ?>
+                    <tr>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->name ?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->tvaNumber ?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->country ?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->created_at?></td>
+                    </tr>
+                <?php endforeach; ?>
+
+            </tbody>
+        </table>
                     </div>
                 </div>
             </div>

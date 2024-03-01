@@ -22,6 +22,7 @@ require 'Controller/ContactsController.php';
 require 'Controller/InvoicesController.php';
 require 'Controller/RolesController.php';
 require 'Controller/UsersController.php';
+require 'Controller/DashboardController.php';
 
 // Get the current page to load
 $page = $_GET['page'] ?? null;
@@ -52,6 +53,18 @@ switch ($page) {
         break;
     case 'logout':
         (new UsersController())->logout(); // TO CONFIRM
+        break;
+    case 'dashboard':
+        (new DashboardController())->index();
+        break;
+    case 'dashboard-invoices':
+        // (new UsersController())->login(); // TO CONFIRM
+        break;
+    case 'dashboard-contacts':
+        // (new UsersController())->register(); // TO CONFIRM
+        break;
+    case 'dashboard-companies':
+        // (new UsersController())->logout(); // TO CONFIRM
         break;
     default:
         (new HomepageController())->index();
