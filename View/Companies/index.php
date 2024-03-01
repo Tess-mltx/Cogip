@@ -1,6 +1,6 @@
 <?php require 'View/includes/header.php' ?>
 <section>
-        <h2>Companies</h2>
+        <h2> All companies</h2>
         <!-- table : companies -->
         <table class="w-8/12">
             <thead class="bg-primary-color-orange">

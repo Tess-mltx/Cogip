@@ -1,7 +1,7 @@
 <?php require 'View/includes/header.php' ?>
     <!-- section_table_contacts -->
     <section>
-        <h2>last contacts</h2>
+        <h2>All contacts</h2>
         <!-- table : contacts -->
         <table class="w-8/12">
             <thead class="bg-primary-color-orange">

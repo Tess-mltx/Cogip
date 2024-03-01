@@ -1,7 +1,7 @@
 <?php require 'View/includes/header.php' ?>
   <!-- section_table_invoices -->
   <section>
-        <h2>last invoices</h2>
+        <h2>All invoices</h2>
         <!-- table : invoices -->
         <table class="w-8/12 ">
             <thead class="bg-primary-color-orange">
