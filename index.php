@@ -44,6 +44,15 @@ switch ($page) {
     case 'invoices-index':
         (new InvoicesController())->index();
         break;
+    case 'login':
+        (new UsersController())->login(); // TO CONFIRM
+        break;
+    case 'register':
+        (new UsersController())->register(); // TO CONFIRM
+        break;
+    case 'logout':
+        (new UsersController())->logout(); // TO CONFIRM
+        break;
     default:
         (new HomepageController())->index();
         break;

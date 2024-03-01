@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 28 fév. 2024 à 15:03
+-- Généré le : ven. 01 mars 2024 à 12:22
 -- Version du serveur : 10.5.20-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -131,6 +131,15 @@ CREATE TABLE `permissions` (
   `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Déchargement des données de la table `permissions`
+--
+
+INSERT INTO `permissions` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'add_invoice', '2024-02-29 15:57:14', '2024-02-29 15:57:14'),
+(2, 'edit_invoice', '2024-02-29 15:57:14', '2024-02-29 15:57:14'),
+(3, 'delete_invoice', '2024-02-29 15:57:14', '2024-02-29 15:57:14');
+
 -- --------------------------------------------------------
 
 --
@@ -144,6 +153,14 @@ CREATE TABLE `roles` (
   `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Déchargement des données de la table `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'admin', '2024-02-29 15:56:51', '2024-02-29 15:56:51'),
+(2, 'user', '2024-02-29 15:56:51', '2024-02-29 15:56:51');
+
 -- --------------------------------------------------------
 
 --
@@ -155,6 +172,16 @@ CREATE TABLE `roles_permissions` (
   `permission_id` int(11) DEFAULT NULL,
   `role_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Déchargement des données de la table `roles_permissions`
+--
+
+INSERT INTO `roles_permissions` (`id`, `permission_id`, `role_id`) VALUES
+(9, 1, 1),
+(10, 2, 1),
+(11, 3, 1),
+(12, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -181,7 +208,7 @@ CREATE TABLE `users` (
   `last_name` varchar(50) NOT NULL,
   `role_id` int(11) DEFAULT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -279,19 +306,19 @@ ALTER TABLE `invoices`
 -- AUTO_INCREMENT pour la table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `roles_permissions`
 --
 ALTER TABLE `roles_permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT pour la table `types`
