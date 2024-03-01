@@ -34,13 +34,7 @@
                 <input class="input" type="password" id="password" name="password" required>
             </div>
         </div>
-        <div class="field">
-            <label class="label" for="password">Repeat Password :</label>
-            <div class="control">
-                <input class="input" type="password" id="password" name="password" required>
-            </div>
-        </div>
-
+      
         <div class="field">
             <div class="control">
                 <button class="button is-link" type="submit">Register</button>

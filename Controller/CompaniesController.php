@@ -23,14 +23,14 @@ class CompaniesController
         require 'Connect/Cogip.php';
 
         $rawCompanies = [];
-        $statement = $bdd->prepare('SELECT name, country, tva FROM companies'); // TO CONFIRM
+        $statement = $bdd->prepare('SELECT name, country, tva, created_at FROM companies'); // TO CONFIRM
         $statement->execute();
         $rawCompanies = $statement->fetchAll();
             
         $companies = [];
         foreach ($rawCompanies as $rawCompagny) 
         {
-            $companies[] = new Companies($rawCompagny['name'], $rawCompagny['country'], $rawCompagny['tva']);
+            $companies[] = new Companies($rawCompagny['name'], $rawCompagny['country'], $rawCompagny['tva'], $rawCompagny['created_at']);
         }
 
         return $companies;
