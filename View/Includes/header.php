@@ -7,7 +7,7 @@
     <link href="src/output.css" rel="stylesheet">
 </head>
 <body>
-<header>
+<header  class="font-sans font-poppins">
 <!-- Barre de navigation -->
 <nav class="bg-primary-color-orange text-white py-4">
     <div class="container mx-auto flex justify-between items-left">
