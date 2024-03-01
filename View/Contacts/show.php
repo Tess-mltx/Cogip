@@ -1,8 +1,6 @@
 <?php require 'View/includes/header.php' ?>
 
-// au clic sur un contact, montre les détails de celui-ci
-
-
+<?= $contact->name ?>
 
 
 

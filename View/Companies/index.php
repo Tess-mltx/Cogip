@@ -15,10 +15,10 @@
 
                 <?php foreach ($companies as $company) : ?>
                     <tr>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->name ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->tvaNumber ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->country ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->created_at?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><a href='index.php?page=compagnies-show&id=<?= urlencode($company->id) ?>'><?= htmlspecialchars($company->name) ?></a></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?= htmlspecialchars($company->tvaNumber) ?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?= htmlspecialchars($company->country) ?></td>
+                        <td class="bg-sky-500/100 px-4 py-3 border"><?= htmlspecialchars($company->created_at) ?></td>
                     </tr>
                 <?php endforeach; ?>
 

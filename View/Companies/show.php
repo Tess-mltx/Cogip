@@ -58,7 +58,7 @@ require 'View/includes/header.php' ?>
     </section>
 </main>
 
-
+    <?php echo $compagny->name ?>
 
 
 
