@@ -40,7 +40,7 @@
             </thead>
             <tbody>
 
-                <?php foreach ($invoices as $invoice) : ?>
+                <?php foreach ($invoices as $invoice) :?>
                 <?php $company = (new CompaniesController())->singleCompany($invoice->company_id);?>
                     <tr>
                         <td class="bg-sky-500/100 px-4 py-3 border"><?=$invoice->reference?></td>

@@ -72,7 +72,7 @@ class ContactsController {
         $contacts = $this->getContacts();
         $selectedArticles = [];
         foreach ($contacts as $contact) {
-            if ($contact->company_id == $id) {
+            if ($contact->id == $id) {
                 $selectedArticles[] = $contact;
             }
         }
