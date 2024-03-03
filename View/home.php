@@ -7,11 +7,11 @@
             padding-top: 85px;
         }
 
-        .section_home_one{
+        .section_home_one {
             min-height: 80vh;
         }
 
-        .form{
+        .form {
             width: 60vw;
             height: 80vh;
             background: white;
@@ -19,30 +19,30 @@
             z-index: 10;
         }
 
-        .account{
-            position:relative;
+        .account {
+            position: relative;
             right: -50px;
             z-index: 11;
         }
 
-        .citation{
+        .citation {
             font-weight: 900;
             letter-spacing: 2px;
             font-size: 16px;
         }
 
-        .service{
+        .service {
             color: white;
         }
 
-        .container_card{
+        .container_card {
             width: 70%;
             display: flex;
             flex-wrap: wrap;
             margin: 0 auto;
         }
 
-        .card{
+        .card {
             width: 30%;
             margin: 10px;
             border: solid 2px black;
@@ -51,19 +51,39 @@
             border-radius: 10px;
         }
 
-        .card i{
+        .card i {
             font-size: 26px;
             padding: 15px 0;
         }
 
-        .our-services{
+        .our-services {
             padding: 5% 0;
         }
 
-        .services{
+        .services {
             padding: 10px 0;
         }
 
+        .table_invoice,
+        .table_contact, 
+        .table_companies {
+            border-radius: 12px;
+            overflow: hidden;
+            width: auto;
+            transition: box-shadow 0.5s ease;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 800px;
+            border: none;
+        }
+
+        .title_invoice,
+        .title_contact,
+        .title_companies {
+            margin: 30px;
+        }
     </style>
     <!-- Section sous la barre de navigation -->
     <section class="section_home_one flex items-center">
@@ -119,121 +139,127 @@
             </div>
             <div class="card">
                 <h3 class="service tracking-widest">Automated Expense Tracking</h3>
-                <i class='bx bx-receipt'></i> 
+                <i class='bx bx-receipt'></i>
                 <p>Effortlessly track expenses with automated systems for accurate record-keeping.</p>
             </div>
             <div class="card">
                 <h3 class="service tracking-widest">Streamlined Audit Preparation</h3>
-                <i class='bx bx-list-ul'></i> 
+                <i class='bx bx-list-ul'></i>
                 <p>Simplify audit preparation with organized documentation and streamlined processes.</p>
             </div>
         </div>
     </section>
 
     <!-- section_table_last_invoices -->
-    <section>
-        <h2>last invoices</h2>
+    <section class="section_last_invoice">
+        <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest">last invoices</h2>
 
         <div class="flex justify-center items-center">
-                    <!-- table n°1 : last invoices -->
-        <table class="w-8/12 border rounded-lg overflow-hidden">
-            <thead class="bg-primary-color-orange">
-                <tr>
-                    <th class="px-4 py-2.5 border capitalize tracking-widest">invoice number</th>
-                    <th class="px-4 py-2.5 border capitalize tracking-widest">company</th>
-                    <th class="px-4 py-2.5 border capitalize tracking-widest">created at</th>
-                </tr>
-            </thead>
-            <tbody>
+            <!-- table n°1 : last invoices -->
 
-                <?php foreach ($invoices as $invoice) : ?>
-                    <?php $company = (new CompaniesController())->singleCompany($invoice->company_id); ?>
-                    <tr>
-                        <td class="bg-sky-500/100 px-4 py-3 border text-center"><?= $invoice->reference ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border text-center"><?= $company[0]->name ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border text-center"><?= $invoice->created_at ?></td>
-                    </tr>
-                <?php endforeach; ?>
+            <div class="table_invoice scroll-shadow-table">
+                <table>
+                    <thead class="bg-primary-color-orange">
+                        <tr>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">invoice number</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">company</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">created at</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-            </tbody>
-        </table>
-        <!-- table n°1 : last invoices_end -->
+                        <?php foreach ($invoices as $invoice) : ?>
+                            <?php $company = (new CompaniesController())->singleCompany($invoice->company_id); ?>
+                            <tr>
+                                <td class="bg-sky-500/100 px-4 py-3 border text-center"><?= $invoice->reference ?></td>
+                                <td class="bg-sky-500/100 px-4 py-3 border text-center"><?= $company[0]->name ?></td>
+                                <td class="bg-sky-500/100 px-4 py-3 border text-center"><?= $invoice->created_at ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+
+                    </tbody>
+                </table>
+                <!-- table n°1 : last invoices_end -->
+            </div>
         </div>
 
     </section>
     <!-- section_table_last_invoices_end -->
 
     <!-- section_table_last_contacts -->
-    <section>
-        <h2>last contacts</h2>
-        <!-- table n°2 : last contacts -->
-        <table class="w-8/12">
-            <thead class="bg-primary-color-orange">
-                <tr>
-                    <th class="px-4 py-2.5 border">name</th>
-                    <th class="px-4 py-2.5 border">phone</th>
-                    <th class="px-4 py-2.5 border">mail</th>
-                    <th class="px-4 py-2.5 border">company</th>
-                    <th class="px-4 py-2.5 border">created at</th>
-                </tr>
-            </thead>
-            <tbody>
+    <section class="section_last_contact">
+        <h2 class="title_contact font-bold text-2xl capitalize tracking-widest">last contacts</h2>
 
-                <?php foreach ($contacts as $contact) : ?>
-                    <?php $company = (new CompaniesController())->singleCompany($contact->company_id); ?>
-                    <tr>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $contact->name ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $contact->phone ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border"> <?= $contact->email ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border"> <?= $company[0]->name ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border"> <?= $contact->created_at ?></td>
-                    </tr>
-                <?php endforeach; ?>
+        <div class="flex justify-center items-center">
 
-            </tbody>
-        </table>
-        <!-- table n°2 : last contacts_end -->
+            <div class="table_contact scroll-shadow-table">
+                <!-- table n°2 : last contacts -->
+                <table>
+                    <thead class="bg-primary-color-orange">
+                        <tr>
+                            <th class="px-4 py-2.5 border">name</th>
+                            <th class="px-4 py-2.5 border">phone</th>
+                            <th class="px-4 py-2.5 border">mail</th>
+                            <th class="px-4 py-2.5 border">company</th>
+                            <th class="px-4 py-2.5 border">created at</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php foreach ($contacts as $contact) : ?>
+                            <?php $company = (new CompaniesController())->singleCompany($contact->company_id); ?>
+                            <tr>
+                                <td class="bg-sky-500/100 px-4 py-3 border"><?= $contact->name ?></td>
+                                <td class="bg-sky-500/100 px-4 py-3 border"><?= $contact->phone ?></td>
+                                <td class="bg-sky-500/100 px-4 py-3 border"> <?= $contact->email ?></td>
+                                <td class="bg-sky-500/100 px-4 py-3 border"> <?= $company[0]->name ?></td>
+                                <td class="bg-sky-500/100 px-4 py-3 border"> <?= $contact->created_at ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+
+                    </tbody>
+                </table>
+                <!-- table n°2 : last contacts_end -->
+            </div>
+        </div>
     </section>
     <!-- section_table_last_contacts_end -->
 
     <!-- section_table_last_companies -->
-    <section>
-        <h2>last companies</h2>
-        <!-- table n°3 : last companies -->
-        <table class="w-8/12">
-            <thead class="bg-primary-color-orange">
-                <tr>
-                    <th class="px-4 py-2.5 border">name</th>
-                    <th class="px-4 py-2.5 border">TVA</th>
-                    <th class="px-4 py-2.5 border">country</th>
-                    <th class="px-4 py-2.5 border">created at</th>
-                </tr>
-            </thead>
-            <tbody>
+    <section class="section_last_companies">
+        <h2 class="title_companies font-bold text-2xl capitalize tracking-widest">last companies</h2>
 
-                <?php foreach ($companies as $company) : ?>
-                    <tr>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->name ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->tvaNumber ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->country ?></td>
-                        <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->created_at ?></td>
-                    </tr>
-                <?php endforeach; ?>
+        <div class="flex justify-center items-center">
 
-            </tbody>
-        </table>
-        <!-- table n°3 : last companies_end -->
-    </section>
-    <!-- section_table_last_companies_end -->
+            <div class="table_companies scroll-shadow-table">
+                <!-- table n°3 : last companies -->
+                <table>
+                    <thead class="bg-primary-color-orange">
+                        <tr>
+                            <th class="px-4 py-2.5 border">name</th>
+                            <th class="px-4 py-2.5 border">TVA</th>
+                            <th class="px-4 py-2.5 border">country</th>
+                            <th class="px-4 py-2.5 border">created at</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-    <!-- section_marketing -->
-    <section>
-        <div class="container">
-            <h3>WORK BETTER IN YOUR COMPANY</h3>
-            <img src="#" alt="">
+                        <?php foreach ($companies as $company) : ?>
+                            <tr>
+                                <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->name ?></td>
+                                <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->tvaNumber ?></td>
+                                <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->country ?></td>
+                                <td class="bg-sky-500/100 px-4 py-3 border"><?= $company->created_at ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+
+                    </tbody>
+                </table>
+                <!-- table n°3 : last companies_end -->
+            </div>
         </div>
     </section>
-    <!-- section_marketing_end -->
+    <!-- section_table_last_companies_end -->
 </main>
 <!-- main_end -->
 
