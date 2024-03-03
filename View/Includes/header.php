@@ -15,8 +15,14 @@
 
 <body>
     <style>
+        body {
+            overflow-x: hidden;
+        }
+
         header {
             font-family: 'Poppins';
+            z-index: 999;
+            box-shadow: 0 0 10px black;
         }
 
         header.scrolled {
@@ -75,6 +81,18 @@
         .active_nav_bar {
             display: flex;
             justify-content: space-around;
+        }
+
+        .card {
+            /* Autres styles des cartes */
+            transition: box-shadow 0.5s ease;
+            /* Ajoute une transition de 0.5 secondes à la propriété box-shadow */
+        }
+
+        .show-box-shadow {
+            box-shadow: inset 1.30px 2.25px 3.55px -0.44px rgba(0, 0, 0, 0.15),
+                inset -1.95px -3.38px 3.55px -0.44px rgba(0, 0, 0, 0.3),
+                3.90px 6.75px 2.66px -1.33px rgba(0, 0, 0, 0.6);
         }
 
         @media screen and (max-width: 1024px) {
@@ -156,6 +174,28 @@
         burgerMenu.addEventListener('click', () => {
             burgerMenu.classList.toggle('active');
             containerNavBar.classList.toggle('active_nav_bar');
+        });
+
+        window.addEventListener('scroll', function() {
+            // Récupérez la section "Our Services"
+            let servicesSection = document.querySelector('.our-services');
+            // Calculez la position verticale du haut de la section "Our Services" moins 200 pixels pour déclencher l'animation légèrement avant d'atteindre la section
+            let triggerPosition = servicesSection.offsetTop - 200;
+            // Récupérez toutes les cartes
+            let cards = document.querySelectorAll('.card');
+
+            // Vérifiez si la position de défilement de la fenêtre est supérieure ou égale à la position de déclenchement
+            if (window.scrollY >= triggerPosition) {
+                // Si oui, ajoutez la classe "show-box-shadow" à chaque carte
+                cards.forEach(function(card) {
+                    card.classList.add('show-box-shadow');
+                });
+            } else {
+                // Sinon, retirez la classe "show-box-shadow" de chaque carte
+                cards.forEach(function(card) {
+                    card.classList.remove('show-box-shadow');
+                });
+            }
         });
     </script>
 </body>
