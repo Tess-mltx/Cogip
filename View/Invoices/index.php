@@ -21,6 +21,22 @@
         width: 1000px;
         border: none;
     }
+
+    input{
+        width: 170px;
+        height: 30px;
+        border-radius: 8px;
+        padding: 10px;
+        border: solid 1px black;
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    input::placeholder{
+        color: black;
+    }
 </style>
 
 <main>
@@ -28,9 +44,9 @@
     <section>
 
         <div class="w-full flex flex-col justify-center items-center">
-            <div class="w-10/12 flex justify-between">
-                <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest">All invoices</h2>
-                <input class="w-48 h-10" type="text" name="table_invoice_search" placeholder="Search company">
+            <div class="w-full flex justify-around items-center">
+                <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest">all invoices</h2>
+                <input type="text" name="table_invoice_search" placeholder="Search company">
             </div>
 
             <div class="table_invoice scroll-shadow-table border-black">

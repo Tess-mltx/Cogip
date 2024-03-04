@@ -93,7 +93,7 @@
                 <p class="text-6xl font-semibold">Create excellence from every transaction</p>
                 <p class="py-5 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt facere soluta vitae itaque dignissimos sapiente magnam, assumenda ad iusto id voluptatum 
                 voluptas voluptatibus voluptate laudantium harum. Quo quam quisquam quis?</p>
-                <a href="index.php?page=contacts-index" class="border-2 border-black px-4 py-2 rounded font-bold tracking-widest hover:bg-sky-500/100">GET A CUSTOM PROPOSAL</a>
+                <a href="#" class="border-2 border-black px-4 py-2 rounded font-bold tracking-widest bg-primary-color-orange">GET A CUSTOM PROPOSAL</a>
             </div>
 
             <div class="form">
