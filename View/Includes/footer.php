@@ -1,40 +1,38 @@
-<footer class="w-full bg-primary-color-orange h-543 flex justify-center items-center">
-    <div class="bg-black h-2/3 border-t-2 flex justify-center items-center flex-col">
-        <div class="w-full h-64 flex justify-between content-center bg-gray-200">
-            <div class="flex justify-center items-center">
-                <img src="img/image/logo_cojip.png" alt="logo_cojip" width="70" height="70">
-                <a href="index.php?page=" class="font-bold tracking-widest text-xl">COGIP</a>
-            </div>
-            <div>
-                <div>
-                    <li><i class='bx bxs-location-plus'></i><a href="#">Square des Martyrs, 6000 Charleroi</a></li>
-                    <li><i class='bx bxs-phone'></i><a href="#">(123) 456-7890</a></li>
-                    <li><i class='bx bx-printer'></i><a href="#">(123) 456-7890</a></li>
-                </div>
-                <div>
-                    <ul class="flex">
-                        <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-google-plus'></i></a></li>
-                        <li><a href="#"><i class='bx bx-wifi'></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="w-full flex justify-between bg-gray-200">
-            <ul class="flex flex-wrap">
-                <li class="mr-5"><a href="index.php?page=">home</a></li>
-                <li class="mr-5"><a href="index.php?page=invoices-index">invoices</a></li>
-                <li class="mr-5"><a href="index.php?page=companies-index">companies</a></li>
-                <li class="mr-5"><a href="index.php?page=contacts-index">contact</a></li>
-                <li class="mr-5"><a href="index.php?page=">privacy policy</a></li>
+<footer class="py-5 bg-primary-color-orange flex flex-col justify-center items-center">
+    <div class="w-full text-center h-auto flex-col flex justify-between">
+        <div>
+            <ul class="flex flex-wrap justify-center">
+                <li class="mr-5 text-lg capitalize tracking-widest font-bold transition duration-200 hover:text-white"><a href="index.php?page=">home</a></li>
+                <li class="mr-5 text-lg capitalize tracking-widest font-bold transition duration-200 hover:text-white"><a href="index.php?page=invoices-index">invoices</a></li>
+                <li class="mr-5 text-lg capitalize tracking-widest font-bold transition duration-200 hover:text-white"><a href="index.php?page=companies-index">companies</a></li>
+                <li class="mr-5 text-lg capitalize tracking-widest font-bold transition duration-200 hover:text-white"><a href="index.php?page=contacts-index">contact</a></li>
+                <li class="mr-5 text-lg capitalize tracking-widest font-bold transition duration-200 hover:text-white"><a href="index.php?page=">privacy policy</a></li>
             </ul>
-            <div>copyright &copy; 2024 Cojip inc.</div>
+        </div>
+        <div class="m-5">
+            <ul class="flex justify-center">
+                <li><a href="#" class="mr-5 text-2xl transition duration-200 hover:text-white"><i class='bx bxl-facebook'></i></a></li>
+                <li><a href="#" class="mr-5 text-2xl transition duration-200 hover:text-white"><i class='bx bxl-twitter'></i></a></li>
+                <li><a href="#" class="mr-5 text-2xl transition duration-200 hover:text-white"><i class='bx bxl-linkedin'></i></a></li>
+                <li><a href="#" class="mr-5 text-2xl transition duration-200 hover:text-white"><i class='bx bxl-youtube'></i></a></li>
+                <li><a href="#" class="mr-5 text-2xl transition duration-200 hover:text-white"><i class='bx bxl-instagram-alt'></i></a></li>
+                <li><a href="#" class="mr-5 text-2xl transition duration-200 hover:text-white"><i class='bx bxl-google-plus'></i></a></li>
+                <li><a href="#" class="mr-5 text-2xl transition duration-200 hover:text-white"><i class='bx bx-wifi'></i></a></li>
+            </ul>
+        </div>
+        <div class="w-9/12 text-center m-auto">
+            <ul>
+                <li class="text-base"><i class='bx bxs-location-plus'></i><a href="#" class="text-lg font-bold transition duration-200 hover:text-white">Square des Martyrs, 6000 Charleroi</a></li>
+                <li class="text-base"><i class='bx bxs-phone'></i><a href="#" class="text-lg font-bold transition duration-200 hover:text-white">(123) 456-7890</a></li>
+                <li class="text-base"><i class='bx bx-printer'></i><a href="#" class="text-lg font-bold transition duration-200 hover:text-white">(123) 456-7890</a></li>
+            </ul>
+        </div>
+        <div class="flex justify-center items-center mt-5">
+            <img src="img/image/logo_cojip.png" alt="logo_cojip" width="70" height="70">
+            <a href="index.php?page=" class="font-bold tracking-widest text-xl">COGIP</a>
         </div>
     </div>
+    <div>copyright &copy; 2024 Cojip inc.</div>
 </footer>
 </body>
 

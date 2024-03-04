@@ -86,11 +86,14 @@
         }
     </style>
     <!-- Section sous la barre de navigation -->
-    <section class="section_home_one flex items-center">
+    <section class="section_home_one flex items-center bg-sky-500/100">
         <div class="container_left mx-auto flex items-center justify-between">
             <!-- Texte à gauche -->
-            <div class="text-left text-white flex-1 px-4">
+            <div class="text-left text-white flex-1 px-5">
                 <p class="text-6xl font-semibold">Create excellence from every transaction</p>
+                <p class="py-5 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt facere soluta vitae itaque dignissimos sapiente magnam, assumenda ad iusto id voluptatum 
+                voluptas voluptatibus voluptate laudantium harum. Quo quam quisquam quis?</p>
+                <a href="index.php?page=contacts-index" class="border-2 border-black px-4 py-2 rounded font-bold tracking-widest hover:bg-sky-500/100">GET A CUSTOM PROPOSAL</a>
             </div>
 
             <div class="form">
@@ -102,47 +105,47 @@
     <section class="our-services">
         <h2 class="services text-center text-3xl font-bold tracking-widest">Our services</h2>
         <div class="container_card">
-            <div class="card">
+            <div class="card bg-sky-500/100">
                 <h3 class="service tracking-widest">Simplified Financial Management</h3>
                 <i class='bx bxs-coin-stack'></i>
                 <p>Simplify your finances with our intuitive accounting management solution.</p>
             </div>
-            <div class="card">
+            <div class="card bg-sky-500/100">
                 <h3 class="service tracking-widest">Dedicated Customer Service</h3>
                 <i class='bx bx-headphone'></i>
                 <p>Get personalized and responsive customer support whenever you need it.</p>
             </div>
-            <div class="card">
+            <div class="card bg-sky-500/100">
                 <h3 class="service tracking-widest">Tailored Solutions</h3>
                 <i class='bx bx-cog'></i>
                 <p>Benefit from customized solutions tailored to your business's specific needs.</p>
             </div>
-            <div class="card">
+            <div class="card bg-sky-500/100">
                 <h3 class="service tracking-widest">Secure Data Access</h3>
                 <i class='bx bx-lock-alt'></i>
                 <p>Protect your confidential information with our advanced security system.</p>
             </div>
-            <div class="card">
+            <div class="card bg-sky-500/100">
                 <h3 class="service tracking-widest">Real-Time Detailed Reports</h3>
                 <i class='bx bx-line-chart'></i>
                 <p>Access detailed and up-to-date reports instantly for better visibility.</p>
             </div>
-            <div class="card">
+            <div class="card bg-sky-500/100">
                 <h3 class="service tracking-widest">Seamless Integration</h3>
                 <i class='bx bx-link'></i>
                 <p>Easily integrate our services with your existing systems for a smooth experience.</p>
             </div>
-            <div class="card">
+            <div class="card bg-sky-500/100">
                 <h3 class="service tracking-widest">Enhanced Financial Insights</h3>
                 <i class='bx bx-bar-chart'></i>
                 <p>Gain deeper financial insights with advanced analytics tools.</p>
             </div>
-            <div class="card">
+            <div class="card bg-sky-500/100">
                 <h3 class="service tracking-widest">Automated Expense Tracking</h3>
                 <i class='bx bx-receipt'></i>
                 <p>Effortlessly track expenses with automated systems for accurate record-keeping.</p>
             </div>
-            <div class="card">
+            <div class="card bg-sky-500/100">
                 <h3 class="service tracking-widest">Streamlined Audit Preparation</h3>
                 <i class='bx bx-list-ul'></i>
                 <p>Simplify audit preparation with organized documentation and streamlined processes.</p>
@@ -157,7 +160,7 @@
         <div class="flex justify-center items-center">
             <!-- table n°1 : last invoices -->
 
-            <div class="table_invoice scroll-shadow-table">
+            <div class="table_invoice scroll-shadow-table border border-black">
                 <table>
                     <thead class="bg-primary-color-orange">
                         <tr>
