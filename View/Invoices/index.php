@@ -26,11 +26,14 @@
 <main>
     <!-- section_table_invoices -->
     <section>
-        <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest">All invoices</h2>
 
-        <div class="flex justify-center items-center">
+        <div class="w-full flex flex-col justify-center items-center">
+            <div class="w-10/12 flex justify-between">
+                <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest">All invoices</h2>
+                <input class="w-48 h-10" type="text" name="table_invoice_search" placeholder="Search company">
+            </div>
 
-            <div class="table_invoice scroll-shadow-table border border-black">
+            <div class="table_invoice scroll-shadow-table border-black">
                 <!-- table : invoices -->
                 <table>
                     <thead class="bg-primary-color-orange">
