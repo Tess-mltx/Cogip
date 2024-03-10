@@ -90,9 +90,20 @@ export function handleLinkShadowOnScroll() {
     }
 }
 
+// Fonction pour gérer l'effet de box-shadow sur le bouton de retour en haut de la page
+function handleScrollTopButtonShadowOnScroll() {
+    let scrollTopButton = document.getElementById('scrollToTopButton');
+    let triggerPosition = 50; // Position de déclenchement du scroll
+    
+    if (window.scrollY >= triggerPosition) {
+        scrollTopButton.classList.add('show-box-shadow');
+    }
+}
+
 // Écouteur d'événements pour le défilement de la fenêtre
 window.addEventListener('scroll', function() {
     // Appeler les fonctions pour gérer les ombres des cartes et des tables lors du défilement
+    handleScrollTopButtonShadowOnScroll();
     handleLinkShadowOnScroll();
     handleCardShadowOnScroll();
     handleTableShadowOnScroll();

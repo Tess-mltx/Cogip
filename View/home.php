@@ -92,6 +92,14 @@
         .paragraph_faq {
             display: none;
         }
+
+        .link_home{
+            transition: box-shadow 0.5s ease;
+        }
+
+        .faq{
+            transition: box-shadow 0.5s ease;
+        }
     </style>
     <!-- Section sous la barre de navigation -->
     <section class="section_home_one flex items-center bg-sky-500/100">
@@ -101,7 +109,7 @@
                 <p class="text-6xl font-semibold">Create excellence from every transaction</p>
                 <p class="py-5 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt facere soluta vitae itaque dignissimos sapiente magnam, assumenda ad iusto id voluptatum
                     voluptas voluptatibus voluptate laudantium harum. Quo quam quisquam quis?</p>
-                <a href="#" class="border-2 border-black px-4 py-2 rounded font-bold tracking-widest bg-primary-color-orange transition duration-250 hover:bg-white hover:text-sky-500">GET A CUSTOM PROPOSAL</a>
+                <a href="#" class="link_home border-2 border-black px-4 py-2 rounded font-bold tracking-widest bg-primary-color-orange transition duration-250 hover:bg-white hover:text-sky-500">GET A CUSTOM PROPOSAL</a>
             </div>
 
             <div class="form hidden md:block">
