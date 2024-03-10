@@ -16,7 +16,6 @@
             height: 80vh;
             background: white;
             clip-path: polygon(20% 0%, 100% 0px, 100% 20%, 100% 80%, 100% 100%, 0px 100%, 40.46% 50.52%, 0px 0px);
-            z-index: 10;
         }
 
         .account {
@@ -57,7 +56,7 @@
         }
 
         .our-services {
-            padding: 5% 0;
+            padding-top: 5%;
         }
 
         .services {
@@ -98,14 +97,14 @@
     <section class="section_home_one flex items-center bg-sky-500/100">
         <div class="container_left mx-auto flex items-center justify-between">
             <!-- Texte à gauche -->
-            <div class="text-left text-white flex-1 px-5">
+            <div class="text-center text-white lg:text-left lg:w-1/2 lg:mx-10 px-5">
                 <p class="text-6xl font-semibold">Create excellence from every transaction</p>
                 <p class="py-5 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt facere soluta vitae itaque dignissimos sapiente magnam, assumenda ad iusto id voluptatum
                     voluptas voluptatibus voluptate laudantium harum. Quo quam quisquam quis?</p>
                 <a href="#" class="border-2 border-black px-4 py-2 rounded font-bold tracking-widest bg-primary-color-orange transition duration-250 hover:bg-white hover:text-sky-500">GET A CUSTOM PROPOSAL</a>
             </div>
 
-            <div class="form">
+            <div class="form hidden md:block">
                 <img class="account" src="img/image/account_banner.jpg" alt="banner_account">
             </div>
         </div>
@@ -164,7 +163,7 @@
 
     <!-- section_table_last_invoices -->
     <section class="section_last_invoice">
-        <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest">last invoices</h2>
+        <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest text-center">last invoices</h2>
 
         <div class="flex justify-center items-center">
             <!-- table n°1 : last invoices -->
@@ -200,7 +199,7 @@
 
     <!-- section_table_last_contacts -->
     <section class="section_last_contact">
-        <h2 class="title_contact font-bold text-2xl capitalize tracking-widest">last contacts</h2>
+        <h2 class="title_contact font-bold text-2xl capitalize tracking-widest text-center">last contacts</h2>
 
         <div class="flex justify-center items-center">
 
@@ -239,7 +238,7 @@
 
     <!-- section_table_last_companies -->
     <section class="section_last_companies">
-        <h2 class="title_companies font-bold text-2xl capitalize tracking-widest">last companies</h2>
+        <h2 class="title_companies font-bold text-2xl capitalize tracking-widest text-center">last companies</h2>
 
         <div class="flex justify-center items-center">
 
@@ -270,7 +269,7 @@
             </div>
         </div>
     </section>
-    <section class="faq">
+    <section class="faq py-5">
         <div class="my-5">
             <h2 class="text-center py-5 text-3xl capitalize tracking-widest font-bold">frequently asked questions</h2>
             <div class="grid grid-cols-2 gap-4 w-8/12 my-3 mx-auto">

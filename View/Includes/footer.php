@@ -33,7 +33,7 @@
         </div>
     </div>
     <div>copyright &copy; 2024 Cojip inc.</div>
-    <div id="scrollToTopButton" class="absolute right-0 w-10 h-10 border border-sky-500 border-2 rounded-full bg-white flex justify-center items-center text-2xl cursor-pointer hover:bg-primary-color-orange"><i class='bx bx-up-arrow-alt'></i></div>
+    <div id="scrollToTopButton" class="fixed z-100 bottom-5 right-5 w-10 h-10 border border-black border-2 rounded-full bg-white flex justify-center items-center text-3xl cursor-pointer hover:bg-primary-color-orange"><i class='bx bx-up-arrow-alt'></i></div>
 </footer>
 </body>
 
