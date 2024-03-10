@@ -102,7 +102,7 @@
                 <p class="text-6xl font-semibold">Create excellence from every transaction</p>
                 <p class="py-5 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt facere soluta vitae itaque dignissimos sapiente magnam, assumenda ad iusto id voluptatum
                     voluptas voluptatibus voluptate laudantium harum. Quo quam quisquam quis?</p>
-                <a href="#" class="border-2 border-black px-4 py-2 rounded font-bold tracking-widest bg-primary-color-orange hover:bg-white transition duration-250 hover:text-orange-500">GET A CUSTOM PROPOSAL</a>
+                <a href="#" class="border-2 border-black px-4 py-2 rounded font-bold tracking-widest bg-primary-color-orange transition duration-250 hover:bg-white hover:text-sky-500">GET A CUSTOM PROPOSAL</a>
             </div>
 
             <div class="form">
@@ -275,7 +275,7 @@
             <h2 class="text-center py-5 text-3xl capitalize tracking-widest font-bold">frequently asked questions</h2>
             <div class="grid grid-cols-2 gap-4 w-8/12 my-3 mx-auto">
                 <article class="faq w-full">
-                    <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white" onclick="toggleFAQ(this)">
+                    <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
@@ -286,7 +286,7 @@
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
-                    <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                    <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                 </article>
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
@@ -294,7 +294,7 @@
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
                     <div>
-                        <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                        <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                     </div>
                 </article>
                 <article class="faq w-full">
@@ -302,68 +302,67 @@
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
-                    <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                    <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                 </article>
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
-                    <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                    <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                 </article>
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
-                    <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                    <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                 </article>
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
-                    <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                    <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                 </article>
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
-                    <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                    <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                 </article>
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
-                    <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                    <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                 </article>
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
-                    <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                    <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                 </article>
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
-                    <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                    <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                 </article>
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>
                         <div class="question_answer px-2 text-lg">What services do you offer at Cojip?</div>
                     </div>
-                    <p class="hidden">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
+                    <p class="paragraph_faq">This question provides an overview of the services offered by Cojip, helping customers understand what the company provides.</p>
                 </article>
             </div>
         </div>
     </section>
-    <div class="arrow_up"><i class='bx bx-up-arrow-alt'></i></div>
 </main>
 
 </body>

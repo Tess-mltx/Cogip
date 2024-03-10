@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link href="src/output.css" rel="stylesheet">
+    <link href="src/css/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -162,79 +162,7 @@
             </nav>
         </div>
     </header>
-    <script>
-        // Sélection du header
-        const header = document.querySelector('header');
-
-        // Fonction pour basculer entre les deux barres de navigation
-        function handleScroll() {
-            if (window.scrollY > 0) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        }
-
-        // Écouteur d'événement pour détecter le scroll
-        window.addEventListener('scroll', handleScroll);
-
-        const burgerMenu = document.querySelector('.burger_menu');
-        const containerNavBar = document.querySelector('.container_menu')
-
-        burgerMenu.addEventListener('click', () => {
-            burgerMenu.classList.toggle('active');
-            containerNavBar.classList.toggle('active_nav_bar');
-        });
-
-        window.addEventListener('scroll', function() {
-            // Récupérez la section "Our Services"
-            let servicesSection = document.querySelector('.our-services');
-            // Calculez la position verticale du haut de la section "Our Services" moins 200 pixels pour déclencher l'animation légèrement avant d'atteindre la section
-            let triggerPosition = servicesSection.offsetTop - 200;
-
-            // Récupérez la section "Last Invoices"
-            let invoicesSection = document.querySelector('.section_last_invoice');
-            // Calculez la position verticale du haut de la section "Last Invoices" moins 200 pixels pour déclencher l'animation légèrement avant d'atteindre la section
-            let invoicesTriggerPosition = invoicesSection.offsetTop - 200;
-
-            // Récupérez toutes les cartes et les tables
-            let cards = document.querySelectorAll('.card');
-            let tables = document.querySelectorAll('.scroll-shadow-table');
-
-            // Vérifiez si la position de défilement de la fenêtre est supérieure ou égale à la position de déclenchement pour les "Our Services"
-            if (window.scrollY >= triggerPosition) {
-                // Si oui, ajoutez la classe "show-box-shadow" à chaque carte
-                cards.forEach(function(card) {
-                    card.classList.add('show-box-shadow');
-                });
-            } else {
-                // Sinon, retirez la classe "show-box-shadow" de chaque carte
-                cards.forEach(function(card) {
-                    card.classList.remove('show-box-shadow');
-                });
-            }
-
-            // Vérifiez si la position de défilement de la fenêtre est supérieure ou égale à la position de déclenchement pour les "Last Invoices"
-            if (window.scrollY >= invoicesTriggerPosition) {
-                // Si oui, ajoutez la classe "with-shadow" à chaque table
-                tables.forEach(function(table) {
-                    table.classList.add('with-shadow');
-                });
-            } else {
-                // Sinon, retirez la classe "with-shadow" de chaque table
-                tables.forEach(function(table) {
-                    table.classList.remove('with-shadow');
-                });
-            }
-        });
-
-        function toggleFAQ(element) {
-            const paragraph = element.querySelector('.paragraph_faq');
-            const icon = element.querySelector('.faq_icon');
-            paragraph.classList.toggle('open'); // Ajoute ou supprime la classe 'open'
-            icon.textContent = icon.textContent === '+' ? '-' : '+';
-        }
-    </script>
+    <script type="module" src="src/js/script.js"></script>
 </body>
 
 </html>
