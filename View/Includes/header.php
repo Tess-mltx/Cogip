@@ -227,6 +227,13 @@
                 });
             }
         });
+
+        function toggleFAQ(element) {
+            const paragraph = element.querySelector('.paragraph_faq');
+            const icon = element.querySelector('.faq_icon');
+            paragraph.classList.toggle('open'); // Ajoute ou supprime la classe 'open'
+            icon.textContent = icon.textContent === '+' ? '-' : '+';
+        }
     </script>
 </body>
 
