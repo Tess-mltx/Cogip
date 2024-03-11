@@ -40,16 +40,11 @@
             font-size: 26px;
             padding: 15px 0;
         }
-
-       .services {
-            padding: 10px 0;
-        }
      
         .table_invoice,
         .table_contact,
         .table_companies {
             border-radius: 12px;
-            overflow: hidden;
             width: auto;
             transition: box-shadow 0.5s ease;
             margin: 15px 0;
@@ -94,7 +89,7 @@
     </section>
 
     <section class="our-services pt-10">
-        <h2 class="services text-center text-3xl font-bold tracking-widest">Our services</h2>
+        <h2 class="services text-center text-3xl font-bold tracking-widest p-3">Our services</h2>
         <div class="container_card mx-auto flex flex-wrap">
             <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
                 <h3 class="service text-white tracking-widest">Simplified Financial Management</h3>
@@ -151,7 +146,7 @@
         <div class="flex justify-center items-center">
             <!-- table n°1 : last invoices -->
 
-            <div class="table_invoice scroll-shadow-table border border-black">
+            <div class="table_invoice scroll-shadow-table border border-black overflow-hidden">
                 <table>
                     <thead class="bg-primary-color-orange">
                         <tr>
@@ -186,7 +181,7 @@
 
         <div class="flex justify-center items-center">
 
-            <div class="table_contact scroll-shadow-table">
+            <div class="table_contact scroll-shadow-table overflow-hidden">
                 <!-- table n°2 : last contacts -->
                 <table>
                     <thead class="bg-primary-color-orange">
@@ -225,7 +220,7 @@
 
         <div class="flex justify-center items-center">
 
-            <div class="table_companies scroll-shadow-table">
+            <div class="table_companies scroll-shadow-table overflow-hidden">
                 <!-- table n°3 : last companies -->
                 <table>
                     <thead class="bg-primary-color-orange">
