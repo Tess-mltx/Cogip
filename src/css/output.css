@@ -898,6 +898,26 @@ video {
   width: ;
 }
 
+.w-\[0px\] {
+  width: 0px;
+}
+
+.w-\[800px\] {
+  width: 800px;
+}
+
+.w-\[700px\] {
+  width: 700px;
+}
+
+.w-\[850px\] {
+  width: 850px;
+}
+
+.w-\[900px\] {
+  width: 900px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }

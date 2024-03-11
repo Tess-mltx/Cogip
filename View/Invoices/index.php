@@ -1,9 +1,4 @@
 <?php require 'View/includes/header.php' ?>
-<style>
-    .table_invoice {
-        transition: box-shadow 0.5s ease;
-    }
-</style>
 <main class="pt-[85px] min-h-[120vh]">
     <section>
         <div class="w-full flex flex-col justify-center items-center">

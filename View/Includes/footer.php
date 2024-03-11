@@ -22,9 +22,9 @@
         </div>
         <div class="w-9/12 text-center m-auto">
             <ul>
-                <li class="text-base"><i class='bx bxs-location-plus'></i><a href="#" class="text-lg font-bold transition duration-200 hover:text-white">Square des Martyrs, 6000 Charleroi</a></li>
-                <li class="text-base"><i class='bx bxs-phone'></i><a href="#" class="text-lg font-bold transition duration-200 hover:text-white">(123) 456-7890</a></li>
-                <li class="text-base"><i class='bx bx-printer'></i><a href="#" class="text-lg font-bold transition duration-200 hover:text-white">(123) 456-7890</a></li>
+                <li class="text-base"><i class='bx bxs-location-plus'></i><a href="#" class="text-lg font-bold transition duration-200 hover:text-white mx-1">Square des Martyrs, 6000 Charleroi</a></li>
+                <li class="text-base"><i class='bx bxs-phone'></i><a href="#" class="text-lg font-bold transition duration-200 hover:text-white mx-1">(123) 456-7890</a></li>
+                <li class="text-base"><i class='bx bx-printer'></i><a href="#" class="text-lg font-bold transition duration-200 hover:text-white mx-1">(123) 456-7890</a></li>
             </ul>
         </div>
         <div class="flex justify-center items-center mt-5">

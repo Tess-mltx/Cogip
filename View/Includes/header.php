@@ -20,7 +20,6 @@
 
         header {
             font-family: 'Poppins';
-            box-shadow: 0 0 10px black;
         }
 
         header.scrolled {
@@ -55,14 +54,29 @@
             justify-content: space-around;
         }
 
-        .card {
-            transition: box-shadow 0.5s ease;
-        }
-
         .show-box-shadow {
             box-shadow: inset 1.00px 1.73px 2.73px -0.34px rgba(0, 0, 0, 0.15),
                 inset -1.50px -2.60px 2.73px -0.34px rgba(0, 0, 0, 0.3),
                 3.00px 5.20px 2.05px -1.02px rgba(0, 0, 0, 0.6);
+        }
+
+        .form {
+            clip-path: polygon(20% 0%, 100% 0px, 100% 20%, 100% 80%, 100% 100%, 0px 100%, 40.46% 50.52%, 0px 0px);
+        }
+
+        .table_invoice,
+        .table_contact,
+        .table_companies,
+        .link_home, .faq, .card {
+            transition: box-shadow 0.5s ease;
+        }
+
+        .paragraph_faq.open {
+            display: block;
+        }
+
+        .paragraph_faq {
+            display: none;
         }
 
         @media screen and (max-width: 1024px) {
@@ -79,8 +93,9 @@
                 display: none;
             }
         }
+
     </style>
-    <header class="fixed transition-all duration-200 bg-primary-color-orange py-2 w-full z-[999]">
+    <header class="fixed transition-all duration-200 bg-primary-color-orange py-2 w-full z-[999] shadow-[0_0px_10px_rgba(0,0,0,1)]">
         <div class="flex justify-between items-center mx-10">
             <div class="flex justify-center items-center">
                 <img src="img/image/logo_cojip.png" alt="logo_cojip" width="70" height="70">
