@@ -1,54 +1,21 @@
 <?php require 'View/includes/header.php' ?>
 <style>
-    main {
-        padding-top: 85px;
-        min-height: 120vh;
-    }
-
-    .title_contact {
-        margin: 30px;
-    }
-
     .table_companies {
-        border-radius: 12px;
-        overflow: hidden;
         transition: box-shadow 0.5s ease;
-        margin: 15px 0;
-    }
-
-    table{
-        width: 1000px;
-    }
-
-    input {
-        width: 190px;
-        height: 30px;
-        border-radius: 8px;
-        padding: 10px;
-        border: solid 1px black;
-    }
-
-    input:focus {
-        outline: none;
-    }
-
-    input::placeholder {
-        color: black;
     }
 </style>
 
-<main>
+<main class="pt-[85px] min-h-[120vh]">
     <section>
-
         <div class="w-full flex flex-col justify-center items-center">
             <div class="w-full flex justify-around items-center">
-                <h2 class="title_contact font-bold text-2xl capitalize tracking-widest">all companies</h2>
-                <input type="text" name="table_invoice_search" placeholder="Search company name">
+                <h2 class="title_companies font-bold text-2xl capitalize tracking-widest m-8">all companies</h2>
+                <input class="focus:outline-none placeholder:text-black rounded-lg p-2.5 border border-solid border-black h-8 w-[190px]" type="text" name="table_invoice_search" placeholder="Search company name">
             </div>
 
-            <div class="table_companies scroll-shadow-table border-black">
+            <div class="table_companies scroll-shadow-table border-black overflow-hidden my-4 mx-0">
                 <!-- table : companies -->
-                <table class="mx-auto">
+                <table class="mx-auto w-[1000px]">
                     <thead class="bg-primary-color-orange">
                         <tr>
                             <th class="px-4 py-2.5 border">name</th>

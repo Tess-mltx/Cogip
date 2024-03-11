@@ -2,7 +2,7 @@
 <style>
     main {
         padding-top: 85px;
-        min-height: 120vh;
+        min-height: 80vh;
     }
 
     .title_invoice {
@@ -39,12 +39,12 @@
     }
 </style>
 
-<main>
+<main class="h-[80vh]md:h-[120vh]"> 
     <!-- section_table_invoices -->
     <section>
 
         <div class="w-full flex flex-col justify-center items-center">
-            <div class="w-full flex justify-around items-center">
+            <div class="w-full flex flex-wrap justify-around items-center">
                 <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest">all invoices</h2>
                 <input type="text" name="table_invoice_search" placeholder="Search company">
             </div>
@@ -54,13 +54,12 @@
                 <table>
                     <thead class="bg-primary-color-orange">
                         <tr>
-                            <th class="px-4 py-2.5 border">invoice number</th>
-                            <th class="px-4 py-2.5 border">company</th>
-                            <th class="px-4 py-2.5 border">created at</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">invoice number</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">company</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">created at</th>
                         </tr>
                     </thead>
                     <tbody>
-
                         <?php foreach ($invoices as $invoice) : ?>
                             <?php $company = (new CompaniesController())->singleCompany($invoice->company_id); ?>
                             <tr>
@@ -69,7 +68,6 @@
                                 <td class="bg-sky-500/100 px-4 py-3 border text-center"><?= $invoice->created_at ?></td>
                             </tr>
                         <?php endforeach; ?>
-
                     </tbody>
                 </table>
                 <!-- table : invoices_end -->

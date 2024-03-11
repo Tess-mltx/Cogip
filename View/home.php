@@ -1,108 +1,37 @@
 <?php require 'View/includes/header.php'; ?>
 
 <!-- main -->
-<main class="bg-primary-color-orange">
+<main class="bg-primary-color-orange pt-[85px]">
     <style>
-        main {
-            padding-top: 85px;
-        }
-
-        .section_home_one {
-            min-height: 80vh;
-        }
-
         .form {
             width: 60vw;
-            height: 80vh;
-            background: white;
             clip-path: polygon(20% 0%, 100% 0px, 100% 20%, 100% 80%, 100% 100%, 0px 100%, 40.46% 50.52%, 0px 0px);
-        }
-
-        .account {
-            position: relative;
-            right: -50px;
-            z-index: 11;
-        }
-
-        .citation {
-            font-weight: 900;
-            letter-spacing: 2px;
-            font-size: 16px;
-        }
-
-        .service {
-            color: white;
-        }
-
-        .container_card {
-            width: 70%;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 auto;
-        }
-
-        .card {
-            width: 30%;
-            margin: 10px;
-            border: solid 2px black;
-            padding: 10px;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        .card i {
-            font-size: 26px;
-            padding: 15px 0;
-        }
-
-        .our-services {
-            padding-top: 5%;
-        }
-
-        .services {
-            padding: 10px 0;
         }
 
         .table_invoice,
         .table_contact,
         .table_companies {
-            border-radius: 12px;
-            overflow: hidden;
-            width: auto;
             transition: box-shadow 0.5s ease;
-            margin: 15px 0;
         }
 
-        table {
-            width: 800px;
-            border: none;
+        .link_home {
+            transition: box-shadow 0.5s ease;
         }
 
-        .title_invoice,
-        .title_contact,
-        .title_companies {
-            margin: 30px;
+        .faq {
+            transition: box-shadow 0.5s ease;
         }
 
         .paragraph_faq.open {
             display: block;
         }
 
-        /* Style pour l'état fermé */
         .paragraph_faq {
             display: none;
         }
-
-        .link_home{
-            transition: box-shadow 0.5s ease;
-        }
-
-        .faq{
-            transition: box-shadow 0.5s ease;
-        }
     </style>
     <!-- Section sous la barre de navigation -->
-    <section class="section_home_one flex items-center bg-sky-500/100">
+    <section class="section_home_one min-h-[80vh] flex items-center bg-sky-500/100">
         <div class="container_left mx-auto flex items-center justify-between">
             <!-- Texte à gauche -->
             <div class="text-center text-white lg:text-left lg:w-1/2 lg:mx-10 px-5">
@@ -112,58 +41,58 @@
                 <a href="#" class="link_home border-2 border-black px-4 py-2 rounded font-bold tracking-widest bg-primary-color-orange transition duration-250 hover:bg-white hover:text-sky-500">GET A CUSTOM PROPOSAL</a>
             </div>
 
-            <div class="form hidden md:block">
-                <img class="account" src="img/image/account_banner.jpg" alt="banner_account">
+            <div class="form hidden h-[80vh] bg-white md:block">
+                <img class="account relative z-10 -right-10" src="img/image/account_banner.jpg" alt="banner_account">
             </div>
         </div>
     </section>
 
-    <section class="our-services">
-        <h2 class="services text-center text-3xl font-bold tracking-widest">Our services</h2>
-        <div class="container_card">
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Simplified Financial Management</h3>
-                <i class='bx bxs-coin-stack'></i>
+    <section class="our-services pt-10">
+        <h2 class="services text-center text-3xl font-bold tracking-widest p-3">Our services</h2>
+        <div class="container_card grid grid-cols-1 md:grid-cols-2 md:justify-center lg:grid-cols-3 mx-auto flex flex-wrap justify-center w-9/12">
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3 ">
+                <h3 class="service text-white tracking-widest">Simplified Financial Management</h3>
+                <i class='bx bxs-coin-stack text-3xl py-4'></i>
                 <p>Simplify your finances with our intuitive accounting management solution.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Dedicated Customer Service</h3>
-                <i class='bx bx-headphone'></i>
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Dedicated Customer Service</h3>
+                <i class='bx bx-headphone text-3xl py-4'></i>
                 <p>Get personalized and responsive customer support whenever you need it.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Tailored Solutions</h3>
-                <i class='bx bx-cog'></i>
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Tailored Solutions</h3>
+                <i class='bx bx-cog text-3xl py-4'></i>
                 <p>Benefit from customized solutions tailored to your business's specific needs.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Secure Data Access</h3>
-                <i class='bx bx-lock-alt'></i>
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Secure Data Access</h3>
+                <i class='bx bx-lock-alt text-3xl py-4'></i>
                 <p>Protect your confidential information with our advanced security system.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Real-Time Detailed Reports</h3>
-                <i class='bx bx-line-chart'></i>
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Real-Time Detailed Reports</h3>
+                <i class='bx bx-line-chart text-3xl py-4'></i>
                 <p>Access detailed and up-to-date reports instantly for better visibility.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Seamless Integration</h3>
-                <i class='bx bx-link'></i>
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Seamless Integration</h3>
+                <i class='bx bx-link text-3xl py-4'></i>
                 <p>Easily integrate our services with your existing systems for a smooth experience.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Enhanced Financial Insights</h3>
-                <i class='bx bx-bar-chart'></i>
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg  p-3 m-3">
+                <h3 class="service text-white tracking-widest">Enhanced Financial Insights</h3>
+                <i class='bx bx-bar-chart text-3xl py-4'></i>
                 <p>Gain deeper financial insights with advanced analytics tools.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Automated Expense Tracking</h3>
-                <i class='bx bx-receipt'></i>
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg  p-3 m-3">
+                <h3 class="service text-white tracking-widest">Automated Expense Tracking</h3>
+                <i class='bx bx-receipt text-3xl py-4'></i>
                 <p>Effortlessly track expenses with automated systems for accurate record-keeping.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Streamlined Audit Preparation</h3>
-                <i class='bx bx-list-ul'></i>
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Streamlined Audit Preparation</h3>
+                <i class='bx bx-list-ul text-3xl py-4'></i>
                 <p>Simplify audit preparation with organized documentation and streamlined processes.</p>
             </div>
         </div>
@@ -171,13 +100,12 @@
 
     <!-- section_table_last_invoices -->
     <section class="section_last_invoice">
-        <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest text-center">last invoices</h2>
+        <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest text-center m-7">last invoices</h2>
 
         <div class="flex justify-center items-center">
             <!-- table n°1 : last invoices -->
-
-            <div class="table_invoice scroll-shadow-table border border-black">
-                <table>
+            <div class="table_invoice scroll-shadow-table border border-black overflow-x-auto mx-1 my-3.5 md:mx-0 rounded-lg table-auto">
+                <table class="table-auto">
                     <thead class="bg-primary-color-orange">
                         <tr>
                             <th class="px-4 py-2.5 border capitalize tracking-widest">invoice number</th>
@@ -186,7 +114,6 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         <?php foreach ($invoices as $invoice) : ?>
                             <?php $company = (new CompaniesController())->singleCompany($invoice->company_id); ?>
                             <tr>
@@ -195,11 +122,10 @@
                                 <td class="bg-sky-500/100 px-4 py-3 border text-center"><?= $invoice->created_at ?></td>
                             </tr>
                         <?php endforeach; ?>
-
                     </tbody>
                 </table>
-                <!-- table n°1 : last invoices_end -->
             </div>
+
         </div>
 
     </section>
@@ -207,20 +133,20 @@
 
     <!-- section_table_last_contacts -->
     <section class="section_last_contact">
-        <h2 class="title_contact font-bold text-2xl capitalize tracking-widest text-center">last contacts</h2>
+        <h2 class="title_contact font-bold text-2xl capitalize tracking-widest text-center m-7">last contacts</h2>
 
         <div class="flex justify-center items-center">
 
-            <div class="table_contact scroll-shadow-table">
+            <div class="table_contact scroll-shadow-table overflow-hidden my-3.5 mx-0 rounded-lg table-auto mx-1">
                 <!-- table n°2 : last contacts -->
-                <table>
+                <table class="table-auto">
                     <thead class="bg-primary-color-orange">
                         <tr>
-                            <th class="px-4 py-2.5 border">name</th>
-                            <th class="px-4 py-2.5 border">phone</th>
-                            <th class="px-4 py-2.5 border">mail</th>
-                            <th class="px-4 py-2.5 border">company</th>
-                            <th class="px-4 py-2.5 border">created at</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">name</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">phone</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">mail</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">company</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">created at</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -246,19 +172,19 @@
 
     <!-- section_table_last_companies -->
     <section class="section_last_companies">
-        <h2 class="title_companies font-bold text-2xl capitalize tracking-widest text-center">last companies</h2>
+        <h2 class="title_companies font-bold text-2xl capitalize tracking-widest text-center m-7">last companies</h2>
 
         <div class="flex justify-center items-center">
 
-            <div class="table_companies scroll-shadow-table">
+            <div class="table_companies scroll-shadow-table overflow-hidden my-3.5 mx-0 rounded-lg table-auto">
                 <!-- table n°3 : last companies -->
-                <table>
+                <table class="table-auto">
                     <thead class="bg-primary-color-orange">
                         <tr>
-                            <th class="px-4 py-2.5 border">name</th>
-                            <th class="px-4 py-2.5 border">TVA</th>
-                            <th class="px-4 py-2.5 border">country</th>
-                            <th class="px-4 py-2.5 border">created at</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">name</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">TVA</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">country</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">created at</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -277,10 +203,10 @@
             </div>
         </div>
     </section>
-    <section class="faq py-5">
+    <section class="faq py-5 transition-shadow duration-500 ease-in-out">
         <div class="my-5">
             <h2 class="text-center py-5 text-3xl capitalize tracking-widest font-bold">frequently asked questions</h2>
-            <div class="grid grid-cols-2 gap-4 w-8/12 my-3 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:w-9/12  gap-4 w-8/12 my-3 mx-auto">
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>

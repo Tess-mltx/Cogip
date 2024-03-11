@@ -55,9 +55,4 @@
     </section>
 </main>
 
-
-
-
-
-
 <?php require 'View/includes/footer.php' ?>
