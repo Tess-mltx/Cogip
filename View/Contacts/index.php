@@ -37,7 +37,6 @@
 <main>
     <!-- section_table_contacts -->
     <section>
-
         <div class="w-full flex flex-col justify-center items-center">
             <div class="w-full flex justify-around items-center">
                 <h2 class="title_contact font-bold text-2xl capitalize tracking-widest">all contacts</h2>

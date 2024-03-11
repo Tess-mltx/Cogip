@@ -19,9 +19,7 @@
         }
 
         .account {
-            position: relative;
             right: -50px;
-            z-index: 11;
         }
 
         .citation {
@@ -30,24 +28,12 @@
             font-size: 16px;
         }
 
-        .service {
-            color: white;
-        }
-
         .container_card {
             width: 70%;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 auto;
         }
 
         .card {
             width: 30%;
-            margin: 10px;
-            border: solid 2px black;
-            padding: 10px;
-            text-align: center;
-            border-radius: 10px;
         }
 
         .card i {
@@ -55,14 +41,10 @@
             padding: 15px 0;
         }
 
-        .our-services {
-            padding-top: 5%;
-        }
-
-        .services {
+       .services {
             padding: 10px 0;
         }
-
+     
         .table_invoice,
         .table_contact,
         .table_companies {
@@ -78,17 +60,10 @@
             border: none;
         }
 
-        .title_invoice,
-        .title_contact,
-        .title_companies {
-            margin: 30px;
-        }
-
         .paragraph_faq.open {
             display: block;
         }
 
-        /* Style pour l'état fermé */
         .paragraph_faq {
             display: none;
         }
@@ -113,56 +88,56 @@
             </div>
 
             <div class="form hidden md:block">
-                <img class="account" src="img/image/account_banner.jpg" alt="banner_account">
+                <img class="account relative z-10" src="img/image/account_banner.jpg" alt="banner_account">
             </div>
         </div>
     </section>
 
-    <section class="our-services">
+    <section class="our-services pt-10">
         <h2 class="services text-center text-3xl font-bold tracking-widest">Our services</h2>
-        <div class="container_card">
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Simplified Financial Management</h3>
+        <div class="container_card mx-auto flex flex-wrap">
+            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Simplified Financial Management</h3>
                 <i class='bx bxs-coin-stack'></i>
                 <p>Simplify your finances with our intuitive accounting management solution.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Dedicated Customer Service</h3>
+            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Dedicated Customer Service</h3>
                 <i class='bx bx-headphone'></i>
                 <p>Get personalized and responsive customer support whenever you need it.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Tailored Solutions</h3>
+            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Tailored Solutions</h3>
                 <i class='bx bx-cog'></i>
                 <p>Benefit from customized solutions tailored to your business's specific needs.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Secure Data Access</h3>
+            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Secure Data Access</h3>
                 <i class='bx bx-lock-alt'></i>
                 <p>Protect your confidential information with our advanced security system.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Real-Time Detailed Reports</h3>
+            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Real-Time Detailed Reports</h3>
                 <i class='bx bx-line-chart'></i>
                 <p>Access detailed and up-to-date reports instantly for better visibility.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Seamless Integration</h3>
+            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Seamless Integration</h3>
                 <i class='bx bx-link'></i>
                 <p>Easily integrate our services with your existing systems for a smooth experience.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Enhanced Financial Insights</h3>
+            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg  p-3 m-3">
+                <h3 class="service text-white tracking-widest">Enhanced Financial Insights</h3>
                 <i class='bx bx-bar-chart'></i>
                 <p>Gain deeper financial insights with advanced analytics tools.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Automated Expense Tracking</h3>
+            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg  p-3 m-3">
+                <h3 class="service text-white tracking-widest">Automated Expense Tracking</h3>
                 <i class='bx bx-receipt'></i>
                 <p>Effortlessly track expenses with automated systems for accurate record-keeping.</p>
             </div>
-            <div class="card bg-sky-500/100">
-                <h3 class="service tracking-widest">Streamlined Audit Preparation</h3>
+            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service text-white tracking-widest">Streamlined Audit Preparation</h3>
                 <i class='bx bx-list-ul'></i>
                 <p>Simplify audit preparation with organized documentation and streamlined processes.</p>
             </div>
@@ -171,7 +146,7 @@
 
     <!-- section_table_last_invoices -->
     <section class="section_last_invoice">
-        <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest text-center">last invoices</h2>
+        <h2 class="title_invoice font-bold text-2xl capitalize tracking-widest text-center m-7">last invoices</h2>
 
         <div class="flex justify-center items-center">
             <!-- table n°1 : last invoices -->
@@ -207,7 +182,7 @@
 
     <!-- section_table_last_contacts -->
     <section class="section_last_contact">
-        <h2 class="title_contact font-bold text-2xl capitalize tracking-widest text-center">last contacts</h2>
+        <h2 class="title_contact font-bold text-2xl capitalize tracking-widest text-center m-7">last contacts</h2>
 
         <div class="flex justify-center items-center">
 
@@ -246,7 +221,7 @@
 
     <!-- section_table_last_companies -->
     <section class="section_last_companies">
-        <h2 class="title_companies font-bold text-2xl capitalize tracking-widest text-center">last companies</h2>
+        <h2 class="title_companies font-bold text-2xl capitalize tracking-widest text-center m-7">last companies</h2>
 
         <div class="flex justify-center items-center">
 
