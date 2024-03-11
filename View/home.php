@@ -107,7 +107,7 @@
             <!-- table n°1 : last invoices -->
 
             <div class="table_invoice scroll-shadow-table border border-black overflow-hidden my-3.5 mx-0 rounded-lg">
-                <table class="">
+                <table>
                     <thead class="bg-primary-color-orange">
                         <tr>
                             <th class="px-4 py-2.5 border capitalize tracking-widest">invoice number</th>
