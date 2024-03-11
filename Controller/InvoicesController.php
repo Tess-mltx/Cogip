@@ -27,7 +27,7 @@ class InvoicesController
         return $invoices;
     }
 
-    public function home() {
+    public function home() { // a quoi sert cette methode ?
         require 'Connect/Cogip.php';
 
         $rawInvoices = [];
@@ -55,5 +55,21 @@ class InvoicesController
             }
         }
         return($selectedArticles);
+    }
+
+    private function postInvoices()
+    {
+        require 'Connect/Cogip.php';
+
+        $statement = $bdd->prepare(' FROM invoices'); // TO CONFIRM
+        $statement->execute();
+
+    }
+
+    public function dashboard()
+    {
+        // LOGIC TO CORRECT
+        $this->postInvoices();
+        require 'View/Dashboard/invoices.php' ;
     }
 }

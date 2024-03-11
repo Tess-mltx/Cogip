@@ -78,4 +78,20 @@ class ContactsController {
         }
         return($selectedArticles);
     }
+
+    private function postContact()
+    {
+        require 'Connect/Cogip.php';
+
+        $statement = $bdd->prepare(' FROM contacts'); // TO CONFIRM
+        // $statement->execute();
+
+    }
+
+    public function dashboard()
+    {
+        // LOGIC TO CORRECT
+        $this->postContact();
+        require 'View/Dashboard/contact.php' ;
+    }
 }

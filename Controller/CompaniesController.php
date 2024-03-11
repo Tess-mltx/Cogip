@@ -69,4 +69,20 @@ class CompaniesController
 
         return $companies;
     }
+
+    private function postCompany()
+    {
+        require 'Connect/Cogip.php';
+
+        $statement = $bdd->prepare(' FROM companies'); // TO CONFIRM
+        // $statement->execute();
+
+    }
+
+    public function dashboard()
+    {
+        // LOGIC TO CORRECT
+        $this->postCompany();
+        require 'View/Dashboard/companies.php' ;
+    }
 }

@@ -1,5 +1,5 @@
 <?php
-require_once 'Model/User.php';
+require_once 'Model/Users.php';
 // refaire les liens !!!!!!!!!
 class UsersController {
     private $userModel;

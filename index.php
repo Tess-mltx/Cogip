@@ -58,13 +58,13 @@ switch ($page) {
         (new DashboardController())->index();
         break;
     case 'dashboard-invoices':
-        // (new UsersController())->login(); // TO CONFIRM
+        (new InvoicesController())->dashboard();
         break;
     case 'dashboard-contacts':
-        // (new UsersController())->register(); // TO CONFIRM
+        (new ContactsController())->dashboard();
         break;
     case 'dashboard-companies':
-        // (new UsersController())->logout(); // TO CONFIRM
+        (new CompaniesController())->dashboard();
         break;
     default:
         (new HomepageController())->index();
