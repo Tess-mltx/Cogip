@@ -74,9 +74,9 @@
         <nav class="flex-1">
             <ul class="mt-2">
                 <li class="flex items-center py-2"><i class='bx bxs-dashboard'></i><a class="px-2 text-xl capitalize hover:text-white transition duration-200 text-white tracking-wider font-bold" href="#">dashboard</a></li>
-                <li class="flex items-center py-2"><i class='bx bxs-notepad'></i><a class="px-2 text-xl capitalize hover:text-white transition duration-200 tracking-wider font-bold" href="#">invoices</a></li>
-                <li class="flex items-center py-2"><i class='bx bxs-business'></i><a class="px-2 text-xl capitalize hover:text-white transition duration-200 tracking-wider font-bold" href="#">companies</a></li>
-                <li class="flex items-center py-2"><i class='bx bxs-contact'></i><a class="px-2 text-xl capitalize hover:text-white transition duration-200 tracking-wider font-bold" href="#">contacts</a></li>
+                <li class="flex items-center py-2"><i class='bx bxs-notepad'></i><a class="px-2 text-xl capitalize hover:text-white transition duration-200 tracking-wider font-bold" href="index.php?page=dashboard-invoices">invoices</a></li>
+                <li class="flex items-center py-2"><i class='bx bxs-business'></i><a class="px-2 text-xl capitalize hover:text-white transition duration-200 tracking-wider font-bold" href="index.php?page=dashboard-companies">companies</a></li>
+                <li class="flex items-center py-2"><i class='bx bxs-contact'></i><a class="px-2 text-xl capitalize hover:text-white transition duration-200 tracking-wider font-bold" href="index.php?page=dashboard-contacts">contacts</a></li>
             </ul>
         </nav>
         <div class="flex justify-between items-center p-3 w-full">
