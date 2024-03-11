@@ -3,7 +3,6 @@
 <style>
     main {
         padding-top: 85px;
-        min-height: 120vh;
     }
 
     .title_contact {
@@ -18,34 +17,19 @@
         width: 1300px;
     }
 
-    input {
-        width: 170px;
-        height: 30px;
-        border-radius: 8px;
-        padding: 10px;
-        border: solid 1px black;
-    }
-
-    input:focus {
-        outline: none;
-    }
-
-    input::placeholder {
-        color: black;
-    }
 </style>
-<main>
+<main class="min-h-[120vh]">
     <!-- section_table_contacts -->
     <section>
         <div class="w-full flex flex-col justify-center items-center">
             <div class="w-full flex justify-around items-center">
                 <h2 class="title_contact font-bold text-2xl capitalize tracking-widest">all contacts</h2>
-                <input type="text" name="table_invoice_search" placeholder="Search contact">
+                <input class="focus:outline-none placeholder:text-black rounded-lg p-2.5 border border-solid border-black h-8 w-[170px]" type="text" name="table_invoice_search" placeholder="Search contact">
             </div>
 
             <div class="table_contact scroll-shadow-table border-black">
                 <!-- table : contacts -->
-                <table class="mx-auto">
+                <table class="mx-auto w-[1000px]">
                     <thead class="bg-primary-color-orange">
                         <tr>
                             <th class="px-4 py-2.5 border">name</th>
