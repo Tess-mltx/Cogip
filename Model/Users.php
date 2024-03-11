@@ -1,20 +1,25 @@
 <?php
+class User {
+    private $pdo;
 
-declare(strict_types= 1);
+    public function __construct($pdo) {
+        $this->pdo = $pdo;
+    }
 
-require("Connect/Cogip.php");
+    public function register($firstname, $lastname, $email, $password) {
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $stmt = $this->pdo->prepare("INSERT INTO users (first_name, last_name, email, password, role_id) VALUES (?, ?, ?, ?, 2)");
+        return $stmt->execute([$firstname, $lastname, $email, $hashed_password]);
+    }
 
-class Users
-{
-    private string $firstname;
-    private string $lastname;
-    private string $email;
-
-    public function __construct(string $firstname, string $lastname, string $email) {
-        $this->firstname = $firstname;
-        $this->lastname = $lastname;
-        $this->email = $email;
+    public function checkUser($email, $password) {
+        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE email = ?");
+        $stmt->execute([$email]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($user && password_verify($password, $user['password'])) {
+            return $user;
+        }
+        return false;
     }
 }
-
-// Class qui prend nom, prénom et e-mail
+?>
