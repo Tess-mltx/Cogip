@@ -52,9 +52,6 @@
         }
 
         .burger_menu .line {
-            width: 25px;
-            height: 4px;
-            background-color: black;
             margin: 3px 0;
             transition: transform 0.3s ease;
         }
@@ -70,11 +67,9 @@
 
         .container_menu {
             display: none;
-            height: 100vh;
         }
 
         .container_menu nav {
-            padding-top: 10px;
             height: 50%;
         }
 
@@ -88,25 +83,16 @@
         }
 
         .card {
-            /* Autres styles des cartes */
             transition: box-shadow 0.5s ease;
-            /* Ajoute une transition de 0.5 secondes à la propriété box-shadow */
         }
 
         .show-box-shadow {
-            box-shadow: inset 1.30px 2.25px 3.55px -0.44px rgba(0, 0, 0, 0.15),
-                inset -1.95px -3.38px 3.55px -0.44px rgba(0, 0, 0, 0.3),
-                3.90px 6.75px 2.66px -1.33px rgba(0, 0, 0, 0.6);
-        }
-
-        .with-shadow {
-            box-shadow: inset 2.90px 5.02px 7.92px -0.99px rgba(0, 0, 0, 0.15),
-                inset -4.35px -7.53px 7.92px -0.99px rgba(0, 0, 0, 0.3),
-                8.70px 15.07px 5.94px -2.97px rgba(0, 0, 0, 0.6);
+            box-shadow: inset 1.00px 1.73px 2.73px -0.34px rgba(0, 0, 0, 0.15),
+                inset -1.50px -2.60px 2.73px -0.34px rgba(0, 0, 0, 0.3),
+                3.00px 5.20px 2.05px -1.02px rgba(0, 0, 0, 0.6);
         }
 
         @media screen and (max-width: 1024px) {
-
             .nav-primary,
             .connexion {
                 display: none;
@@ -147,12 +133,12 @@
                 <a href="#" class="font-bold capitalize tracking-widest text-lg px-4 py-2 hover:text-white">login</a>
             </div>
             <div class="burger_menu flex flex-col justify-center items-center w-8 h-8 cursor-pointer">
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="line w-[25px] h-[4px] my-[3px] mx-0 bg-black"></div>
+                <div class="line w-[25px] h-[4px] my-[3px] mx-0 bg-black"></div>
             </div>
         </div>
-        <div class="container_menu bg-primary-color-orange absolute w-full">
-            <nav class="flex flex-col ">
+        <div class="container_menu bg-primary-color-orange absolute w-full h-[100vh]">
+            <nav class="flex flex-col pt-2.5">
                 <a href="index.php?page=" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">home</a>
                 <a href="index.php?page=invoices-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">invoices</a>
                 <a href="index.php?page=companies-index" class=" text-center text-xl font-bold tracking-widest capitalize hover:text-white">companies</a>

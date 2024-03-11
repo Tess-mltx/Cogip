@@ -4,7 +4,6 @@
         transition: box-shadow 0.5s ease;
     }
 </style>
-
 <main class="pt-[85px] min-h-[120vh]">
     <section>
         <div class="w-full flex flex-col justify-center items-center">
@@ -13,8 +12,7 @@
                 <input class="focus:outline-none placeholder:text-black rounded-lg p-2.5 border border-solid border-black h-8 w-[190px]" type="text" name="table_invoice_search" placeholder="Search company name">
             </div>
 
-            <div class="table_companies scroll-shadow-table border-black overflow-hidden my-4 mx-0">
-                <!-- table : companies -->
+            <div class="table_companies scroll-shadow-table border-black">
                 <table class="mx-auto w-[1000px]">
                     <thead class="bg-primary-color-orange">
                         <tr>
@@ -37,11 +35,9 @@
 
                     </tbody>
                 </table>
-                <!-- table : companies_end -->
             </div>
         </div>
     </section>
-    <!-- section_table_companies_end -->
 </main>
 
 <?php require 'View/includes/footer.php' ?>

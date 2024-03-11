@@ -32,9 +32,7 @@
         </div>
 
     </div>
-
-
-
+    
     <section>
         <h2>Créer une Nouvelle Facture</h2>
         <form id="invoiceForm">
