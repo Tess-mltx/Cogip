@@ -1,4 +1,4 @@
-<footer class="py-5 bg-primary-color-orange flex flex-col justify-center items-center">
+<footer class="py-5 bg-primary-color-orange flex flex-col justify-center items-center px-[5%] shadow-[0_0px_10px_rgba(0,0,0,1)]">
     <div class="w-full text-center h-auto flex-col flex justify-between">
         <div>
             <ul class="flex flex-wrap justify-center">
