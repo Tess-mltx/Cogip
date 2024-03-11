@@ -7,11 +7,6 @@
             width: 60vw;
             clip-path: polygon(20% 0%, 100% 0px, 100% 20%, 100% 80%, 100% 100%, 0px 100%, 40.46% 50.52%, 0px 0px);
         }
-
-        .card i {
-            font-size: 26px;
-            padding: 15px 0;
-        }
      
         .table_invoice,
         .table_contact,
@@ -55,50 +50,50 @@
 
     <section class="our-services pt-10">
         <h2 class="services text-center text-3xl font-bold tracking-widest p-3">Our services</h2>
-        <div class="container_card mx-auto flex flex-wrap w-3/4 justify-center">
-            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3 w-1/4">
+        <div class="container_card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto flex flex-wrap justify-center w-9/12">
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3 ">
                 <h3 class="service text-white tracking-widest">Simplified Financial Management</h3>
-                <i class='bx bxs-coin-stack'></i>
+                <i class='bx bxs-coin-stack text-3xl py-4'></i>
                 <p>Simplify your finances with our intuitive accounting management solution.</p>
             </div>
-            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3 w-1/4">
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
                 <h3 class="service text-white tracking-widest">Dedicated Customer Service</h3>
-                <i class='bx bx-headphone'></i>
+                <i class='bx bx-headphone text-3xl py-4'></i>
                 <p>Get personalized and responsive customer support whenever you need it.</p>
             </div>
-            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3 w-1/4">
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
                 <h3 class="service text-white tracking-widest">Tailored Solutions</h3>
-                <i class='bx bx-cog'></i>
+                <i class='bx bx-cog text-3xl py-4'></i>
                 <p>Benefit from customized solutions tailored to your business's specific needs.</p>
             </div>
-            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3 w-1/4">
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
                 <h3 class="service text-white tracking-widest">Secure Data Access</h3>
-                <i class='bx bx-lock-alt'></i>
+                <i class='bx bx-lock-alt text-3xl py-4'></i>
                 <p>Protect your confidential information with our advanced security system.</p>
             </div>
-            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3 w-1/4">
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
                 <h3 class="service text-white tracking-widest">Real-Time Detailed Reports</h3>
-                <i class='bx bx-line-chart'></i>
+                <i class='bx bx-line-chart text-3xl py-4'></i>
                 <p>Access detailed and up-to-date reports instantly for better visibility.</p>
             </div>
-            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3 w-1/4">
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
                 <h3 class="service text-white tracking-widest">Seamless Integration</h3>
-                <i class='bx bx-link'></i>
+                <i class='bx bx-link text-3xl py-4'></i>
                 <p>Easily integrate our services with your existing systems for a smooth experience.</p>
             </div> 
-            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg  p-3 m-3  w-1/4">
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg  p-3 m-3">
                 <h3 class="service text-white tracking-widest">Enhanced Financial Insights</h3>
-                <i class='bx bx-bar-chart'></i>
+                <i class='bx bx-bar-chart text-3xl py-4'></i>
                 <p>Gain deeper financial insights with advanced analytics tools.</p>
             </div>
-            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg  p-3 m-3 w-1/4">
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg  p-3 m-3">
                 <h3 class="service text-white tracking-widest">Automated Expense Tracking</h3>
-                <i class='bx bx-receipt'></i>
+                <i class='bx bx-receipt text-3xl py-4'></i>
                 <p>Effortlessly track expenses with automated systems for accurate record-keeping.</p>
             </div>
-            <div class="card bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3 w-1/4">
+            <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3">
                 <h3 class="service text-white tracking-widest">Streamlined Audit Preparation</h3>
-                <i class='bx bx-list-ul'></i>
+                <i class='bx bx-list-ul text-3xl py-4'></i>
                 <p>Simplify audit preparation with organized documentation and streamlined processes.</p>
             </div>
         </div>
