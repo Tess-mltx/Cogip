@@ -1,29 +1,61 @@
 <?php
-
-declare(strict_types=1);
-
+require_once 'Model/User.php';
+// refaire les liens !!!!!!!!!
 class UsersController {
-    public function index() {
-        $users = $this->getUsers();
+    private $userModel;
 
-        require("jsp encore la view qu'il faut");
+    public function __construct($pdo) {
+        $this->userModel = new User($pdo);
     }
 
-    private function getUsers() {
-        require('Connect/Cogip.php');
-
-        $req = $pdo->prepare('SELECT * FROM users');
-        $req->execute();
-        $rawUsers = $req->fetchAll();
-
-        $users = []; 
-
-        foreach($rawUsers as $rawUser) {
-            $users[] = new Users($rawUser['firstname'], $rawUser['lastname'], $rawUser['email']);
+    public function login() {
+        session_start();
+        $email = $_POST['email'] ?? '';
+        $password = $_POST['password'] ?? '';
+        $user = $this->userModel->checkUser($email, $password);
+        
+        if ($user) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_role'] = $user['role_id'];
+            
+            
+            if ($user['role_id'] == 1) { 
+                header("Location: admin_dashboard.php"); 
+            } else {
+                header("Location: user_dashboard.php"); 
+            }
+            exit;
+        } else {
+            $_SESSION['error'] = 'Invalid credentials';
+            header("Location: login.php");
+            exit;
         }
-
-        // tout les users dans un tableau
-
-        return $users;
     }
+
+    public function register() {
+        session_start(); 
+        $firstname = $_POST['firstname'] ?? '';
+        $lastname = $_POST['lastname'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $password = $_POST['password'] ?? '';
+        
+        if ($this->userModel->register($firstname, $lastname, $email, $password)) {
+            $_SESSION['success'] = 'Registration successful. You can now log in.';
+            header("Location: login.php");
+            exit;
+        } else {
+            $_SESSION['error'] = 'Registration failed';
+            header("Location: register.php");
+            exit;
+        }
+    }
+
+    public function logout() {
+        session_start();
+        session_unset();
+        session_destroy();
+        header('Location: index.php'); 
+        exit;
+    }   
 }
+?>

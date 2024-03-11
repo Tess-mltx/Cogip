@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 01 mars 2024 à 12:22
+-- Généré le : lun. 11 mars 2024 à 09:42
 -- Version du serveur : 10.5.20-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -218,8 +218,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `role_id`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'Jean-Christian', 'Ranu', NULL, 'j-c.ranu@cogip.be', 'v4N1qu3rT4M3r3', '2024-02-28 14:48:47', '2024-02-28 14:48:47'),
-(2, 'Harry', 'Potter', NULL, 'harry.potter@cogip.be', 'j3V1ss0usl35c4l13r', '2024-02-28 14:48:47', '2024-02-28 14:48:47');
+(1, 'Jean-Christian', 'Ranu', 1, 'j-c.ranu@cogip.be', 'v4N1qu3rT4M3r3', '2024-02-28 14:48:47', '2024-03-11 09:32:09'),
+(2, 'Harry', 'Potter', 2, 'harry.potter@cogip.be', 'j3V1ss0usl35c4l13r', '2024-02-28 14:48:47', '2024-03-11 09:33:44');
 
 --
 -- Index pour les tables déchargées
