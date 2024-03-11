@@ -1,10 +1,5 @@
 <?php require 'View/includes/header.php' ?>
 <style>
-    main {
-        padding-top: 85px;
-        min-height: 120vh;
-    }
-
     .title_contact {
         margin: 30px;
     }
@@ -37,9 +32,8 @@
     }
 </style>
 
-<main>
+<main class="pt-[85px] min-h-[120vh]">
     <section>
-
         <div class="w-full flex flex-col justify-center items-center">
             <div class="w-full flex justify-around items-center">
                 <h2 class="title_contact font-bold text-2xl capitalize tracking-widest">all companies</h2>

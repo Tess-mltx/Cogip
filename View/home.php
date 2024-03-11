@@ -7,18 +7,18 @@
             width: 60vw;
             clip-path: polygon(20% 0%, 100% 0px, 100% 20%, 100% 80%, 100% 100%, 0px 100%, 40.46% 50.52%, 0px 0px);
         }
-     
+
         .table_invoice,
         .table_contact,
         .table_companies {
             transition: box-shadow 0.5s ease;
         }
 
-        .link_home{
+        .link_home {
             transition: box-shadow 0.5s ease;
         }
 
-        .faq{
+        .faq {
             transition: box-shadow 0.5s ease;
         }
 
@@ -29,7 +29,6 @@
         .paragraph_faq {
             display: none;
         }
-
     </style>
     <!-- Section sous la barre de navigation -->
     <section class="section_home_one min-h-[80vh] flex items-center bg-sky-500/100">
@@ -50,7 +49,7 @@
 
     <section class="our-services pt-10">
         <h2 class="services text-center text-3xl font-bold tracking-widest p-3">Our services</h2>
-        <div class="container_card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto flex flex-wrap justify-center w-9/12">
+        <div class="container_card grid grid-cols-1 md:grid-cols-2 md:justify-center lg:grid-cols-3 mx-auto flex flex-wrap justify-center w-9/12">
             <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg p-3 m-3 ">
                 <h3 class="service text-white tracking-widest">Simplified Financial Management</h3>
                 <i class='bx bxs-coin-stack text-3xl py-4'></i>
@@ -80,7 +79,7 @@
                 <h3 class="service text-white tracking-widest">Seamless Integration</h3>
                 <i class='bx bx-link text-3xl py-4'></i>
                 <p>Easily integrate our services with your existing systems for a smooth experience.</p>
-            </div> 
+            </div>
             <div class="card flex flex-col justify-between bg-sky-500/100 text-center border-2 border-black rounded-lg  p-3 m-3">
                 <h3 class="service text-white tracking-widest">Enhanced Financial Insights</h3>
                 <i class='bx bx-bar-chart text-3xl py-4'></i>
@@ -105,9 +104,8 @@
 
         <div class="flex justify-center items-center">
             <!-- table n°1 : last invoices -->
-
-            <div class="table_invoice scroll-shadow-table border border-black overflow-hidden my-3.5 mx-0 rounded-lg">
-                <table>
+            <div class="table_invoice scroll-shadow-table border border-black overflow-x-auto mx-1 my-3.5 md:mx-0 rounded-lg table-auto">
+                <table class="table-auto">
                     <thead class="bg-primary-color-orange">
                         <tr>
                             <th class="px-4 py-2.5 border capitalize tracking-widest">invoice number</th>
@@ -116,7 +114,6 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         <?php foreach ($invoices as $invoice) : ?>
                             <?php $company = (new CompaniesController())->singleCompany($invoice->company_id); ?>
                             <tr>
@@ -125,11 +122,10 @@
                                 <td class="bg-sky-500/100 px-4 py-3 border text-center"><?= $invoice->created_at ?></td>
                             </tr>
                         <?php endforeach; ?>
-
                     </tbody>
                 </table>
-                <!-- table n°1 : last invoices_end -->
             </div>
+
         </div>
 
     </section>
@@ -141,16 +137,16 @@
 
         <div class="flex justify-center items-center">
 
-            <div class="table_contact scroll-shadow-table overflow-hidden my-3.5 mx-0 rounded-lg">
+            <div class="table_contact scroll-shadow-table overflow-hidden my-3.5 mx-0 rounded-lg table-auto mx-1">
                 <!-- table n°2 : last contacts -->
-                <table>
+                <table class="table-auto">
                     <thead class="bg-primary-color-orange">
                         <tr>
-                            <th class="px-4 py-2.5 border">name</th>
-                            <th class="px-4 py-2.5 border">phone</th>
-                            <th class="px-4 py-2.5 border">mail</th>
-                            <th class="px-4 py-2.5 border">company</th>
-                            <th class="px-4 py-2.5 border">created at</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">name</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">phone</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">mail</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">company</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">created at</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -180,15 +176,15 @@
 
         <div class="flex justify-center items-center">
 
-            <div class="table_companies scroll-shadow-table overflow-hidden my-3.5 mx-0 rounded-lg">
+            <div class="table_companies scroll-shadow-table overflow-hidden my-3.5 mx-0 rounded-lg table-auto">
                 <!-- table n°3 : last companies -->
-                <table>
+                <table class="table-auto">
                     <thead class="bg-primary-color-orange">
                         <tr>
-                            <th class="px-4 py-2.5 border">name</th>
-                            <th class="px-4 py-2.5 border">TVA</th>
-                            <th class="px-4 py-2.5 border">country</th>
-                            <th class="px-4 py-2.5 border">created at</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">name</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">TVA</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">country</th>
+                            <th class="px-4 py-2.5 border capitalize tracking-widest">created at</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -210,7 +206,7 @@
     <section class="faq py-5 transition-shadow duration-500 ease-in-out">
         <div class="my-5">
             <h2 class="text-center py-5 text-3xl capitalize tracking-widest font-bold">frequently asked questions</h2>
-            <div class="grid grid-cols-2 gap-4 w-8/12 my-3 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:w-9/12  gap-4 w-8/12 my-3 mx-auto">
                 <article class="faq w-full">
                     <div class="bg-sky-500/100 flex items-center cursor-pointer px-3 py-1 transition duration-250 hover:bg-white">
                         <div class="faq_icon text-2xl">+</div>
