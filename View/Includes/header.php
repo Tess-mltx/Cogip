@@ -153,14 +153,15 @@
         </div>
         <div class="container_menu bg-primary-color-orange absolute w-full">
             <nav class="flex flex-col ">
-                <a href="index.php?page=" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">home</a>
+                <a href="index.php" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">home</a>
                 <a href="index.php?page=invoices-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">invoices</a>
-                <a href="index.php?page=companies-index" class=" text-center text-xl font-bold tracking-widest capitalize hover:text-white">companies</a>
-                <a href="index.php?page=contacts-index" class=" text-center text-xl font-bold tracking-widest capitalize hover:text-white">contact</a>
-                <a href="#" class=" text-center font-bold capitalize tracking-widest text-xl hover:text-white">sign up</a>
-                <a href="#" class=" text-center font-bold capitalize tracking-widest text-xl hover:text-white">login</a>
+                <a href="index.php?page=companies-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">companies</a>
+                <a href="index.php?page=contacts-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">contact</a>
+                <a href="index.php?page=register" class="text-center font-bold capitalize tracking-widest text-xl hover:text-white">sign up</a>
+                <a href="index.php?page=login" class="text-center font-bold capitalize tracking-widest text-xl hover:text-white">login</a>
             </nav>
         </div>
+
     </header>
     <script type="module" src="src/js/script.js"></script>
 </body>

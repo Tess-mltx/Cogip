@@ -8,6 +8,8 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
+require 'Connect/Cogip.php';
+
 //include all your model files here
 require 'Model/Compagnies.php';
 require 'Model/Contacts.php';
@@ -46,13 +48,13 @@ switch ($page) {
         (new InvoicesController())->index();
         break;
     case 'login':
-        (new UsersController())->login(); // TO CONFIRM
+        (new UsersController($bdd))->login(); // TO CONFIRM
         break;
     case 'register':
-        (new UsersController())->register(); // TO CONFIRM
+        (new UsersController($bdd))->register(); // TO CONFIRM
         break;
     case 'logout':
-        (new UsersController())->logout(); // TO CONFIRM
+        (new UsersController($bdd))->logout(); // TO CONFIRM
         break;
     case 'dashboard':
         (new DashboardController())->index();
