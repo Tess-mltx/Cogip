@@ -44,12 +44,6 @@
             <label for="customerName">Nom du Client :</label>
             <input type="text" id="customerName" name="customerName" required><br>
 
-            <label for="amount">Montant :</label>
-            <input type="number" id="amount" name="amount" required><br>
-
-            <label for="dueDate">Date d'Échéance :</label>
-            <input type="date" id="dueDate" name="dueDate" required><br>
-
             <button type="submit">Créer Facture</button>
         </form>
     </section>
