@@ -143,8 +143,8 @@
             </nav>
 
             <div class="connexion flex">
-                <a href="#" class=" font-bold capitalize tracking-widest text-lg mr-4 px-4 py-2 hover:text-white">sign up</a>
-                <a href="#" class="font-bold capitalize tracking-widest text-lg px-4 py-2 hover:text-white">login</a>
+                <a href="index.php?page=register" class=" font-bold capitalize tracking-widest text-lg mr-4 px-4 py-2 hover:text-white">sign up</a>
+                <a href="index.php?page=login" class="font-bold capitalize tracking-widest text-lg px-4 py-2 hover:text-white">login</a>
             </div>
             <div class="burger_menu flex flex-col justify-center items-center w-8 h-8 cursor-pointer">
                 <div class="line"></div>
