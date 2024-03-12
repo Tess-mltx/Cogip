@@ -21,48 +21,48 @@
     <section class="our-services pt-10">
         <h2 class="services text-center text-3xl font-bold tracking-widest p-3">Our services</h2>
         <div class="container_card grid grid-cols-1 md:grid-cols-2 md:justify-center lg:grid-cols-3 mx-auto flex flex-wrap justify-center w-9/12">
-            <div class="card flex flex-col justify-between  text-center border-2 border-black rounded-lg p-3 m-3 ">
-                <h3 class="service tracking-widest ">Simplified Financial Management</h3>
+            <div class="card flex flex-col justify-between text-center border-2 border-black rounded-lg p-3 m-3 ">
+                <h3 class="tracking-widest text-sky-500/100 font-bold">Simplified Financial Management</h3>
                 <i class='bx bxs-coin-stack text-3xl py-4'></i>
                 <p>Simplify your finances with our intuitive accounting management solution.</p>
             </div>
-            <div class="card flex flex-col justify-between  text-center border-2 border-black rounded-lg p-3 m-3">
-                <h3 class="service  tracking-widest">Dedicated Customer Service</h3>
+            <div class="card flex flex-col justify-between text-center border-2 border-black rounded-lg p-3 m-3">
+                <h3 class="service tracking-widest text-sky-500/100 font-bold">Dedicated Customer Service</h3>
                 <i class='bx bx-headphone text-3xl py-4'></i>
                 <p>Get personalized and responsive customer support whenever you need it.</p>
             </div>
             <div class="card flex flex-col justify-between text-center border-2 border-black rounded-lg p-3 m-3">
-                <h3 class="service tracking-widest">Tailored Solutions</h3>
+                <h3 class="tracking-widest text-sky-500/100 font-bold">Tailored Solutions</h3>
                 <i class='bx bx-cog text-3xl py-4'></i>
                 <p>Benefit from customized solutions tailored to your business's specific needs.</p>
             </div>
             <div class="card flex flex-col justify-between text-center border-2 border-black rounded-lg p-3 m-3">
-                <h3 class="service tracking-widest">Secure Data Access</h3>
+                <h3 class="tracking-widest text-sky-500/100 font-bold">Secure Data Access</h3>
                 <i class='bx bx-lock-alt text-3xl py-4'></i>
                 <p>Protect your confidential information with our advanced security system.</p>
             </div>
             <div class="card flex flex-col justify-between text-center border-2 border-black rounded-lg p-3 m-3">
-                <h3 class="service text-blue-600 tracking-widest">Real-Time Detailed Reports</h3>
+                <h3 class="tracking-widest text-sky-500/100 font-bold">Real-Time Detailed Reports</h3>
                 <i class='bx bx-line-chart text-3xl py-4'></i>
                 <p>Access detailed and up-to-date reports instantly for better visibility.</p>
             </div>
             <div class="card flex flex-col justify-between text-center border-2 border-black rounded-lg p-3 m-3">
-                <h3 class="service tracking-widest">Seamless Integration</h3>
+                <h3 class="tracking-widest text-sky-500/100 font-bold">Seamless Integration</h3>
                 <i class='bx bx-link text-3xl py-4'></i>
                 <p>Easily integrate our services with your existing systems for a smooth experience.</p>
             </div>
             <div class="card flex flex-col justify-between text-center border-2 border-black rounded-lg  p-3 m-3">
-                <h3 class="service tracking-widest">Enhanced Financial Insights</h3>
+                <h3 class="tracking-widest text-sky-500/100 font-bold">Enhanced Financial Insights</h3>
                 <i class='bx bx-bar-chart text-3xl py-4'></i>
                 <p>Gain deeper financial insights with advanced analytics tools.</p>
             </div>
             <div class="card flex flex-col justify-between text-center border-2 border-black rounded-lg  p-3 m-3">
-                <h3 class="service tracking-widest">Automated Expense Tracking</h3>
+                <h3 class="tracking-widest text-sky-500/100 font-bold">Automated Expense Tracking</h3>
                 <i class='bx bx-receipt text-3xl py-4'></i>
                 <p>Effortlessly track expenses with automated systems for accurate record-keeping.</p>
             </div>
             <div class="card flex flex-col justify-between text-center border-2 border-black rounded-lg p-3 m-3">
-                <h3 class="service tracking-widest ">Streamlined Audit Preparation</h3>
+                <h3 class="tracking-widest text-sky-500/100 font-bold">Streamlined Audit Preparation</h3>
                 <i class='bx bx-list-ul text-3xl py-4'></i>
                 <p>Simplify audit preparation with organized documentation and streamlined processes.</p>
             </div>
