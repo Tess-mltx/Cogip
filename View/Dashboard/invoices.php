@@ -37,7 +37,7 @@
 
     <section>
         <h2>Créer une Nouvelle Facture</h2>
-        <form id="invoiceForm">
+        <form id="invoiceForm" action="" methode="post">
             <label for="invoiceNumber">Numéro de Facture :</label>
             <input type="text" id="invoiceNumber" name="invoiceNumber" required><br>
 

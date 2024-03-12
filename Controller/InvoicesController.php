@@ -57,21 +57,24 @@ class InvoicesController
         return($selectedArticles);
     }
 
-    // private function postInvoices()
-    // {
-    //     require 'Connect/Cogip.php';
+    private function postInvoices($companyID, $ref)
+    {
+        require 'Connect/Cogip.php';
+        $statement = $bdd->prepare("INSERT INTO invoices (company_id, ref) VALUES (?, ?)");
+        $statement->bind_param($companyID, $ref);
+        $statement->execute();
 
-    //     $ref = $_GET[];
-    //     $companyID = null;
-    //     // $statement = $bdd->prepare('INSERT INTO invoices (customer_name, amount, due_date) VALUES ('', $amount, '''); // TO CONFIRM
-    //     $statement->execute();
-
-    // }
+    }
 
     public function dashboard()
     {
-        // LOGIC TO CORRECT
-        $this->postInvoices();
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['invoiceNumber']) && isset($_POST['customerName']))
+        {
+            $ref = $_POST['customerName'];
+            $companyID = $_POST['invoiceNumber'];
+
+            $this->postInvoices($companyID, $ref);
+        }
         require 'View/Dashboard/invoices.php' ;
     }
 }
