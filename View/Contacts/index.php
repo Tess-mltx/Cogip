@@ -1,34 +1,13 @@
 <?php require 'View/includes/header.php' ?>
-
-<style>
-    main {
-        padding-top: 85px;
-    }
-
-    .title_contact {
-        margin: 30px;
-    }
-
-    .table_contact {
-        border-radius: 12px;
-        overflow: hidden;
-        transition: box-shadow 0.5s ease;
-        margin: 15px 0;
-        width: 1300px;
-    }
-
-</style>
-<main class="min-h-[120vh]">
-    <!-- section_table_contacts -->
+<main class="pt-[85px] min-h-[120vh]">
     <section>
         <div class="w-full flex flex-col justify-center items-center">
             <div class="w-full flex justify-around items-center">
-                <h2 class="title_contact font-bold text-2xl capitalize tracking-widest">all contacts</h2>
+                <h2 class="title_contact font-bold text-2xl capitalize tracking-widest m-8">all contacts</h2>
                 <input class="focus:outline-none placeholder:text-black rounded-lg p-2.5 border border-solid border-black h-8 w-[170px]" type="text" name="table_invoice_search" placeholder="Search contact">
             </div>
 
             <div class="table_contact scroll-shadow-table border-black">
-                <!-- table : contacts -->
                 <table class="mx-auto w-[1000px]">
                     <thead class="bg-primary-color-orange">
                         <tr>
@@ -54,11 +33,9 @@
 
                     </tbody>
                 </table>
-                <!-- table n°2 : last contacts_end -->
             </div>
         </div>
     </section>
-    <!-- section_table_last_contacts_end -->
 </main>
 
 <?php require 'View/includes/footer.php' ?>

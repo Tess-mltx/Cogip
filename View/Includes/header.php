@@ -12,31 +12,14 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body class="bg-primary-color-orange">
+<body class="bg-slate-50">
     <style>
-        body {
+        body{
             overflow-x: hidden;
         }
 
         header {
             font-family: 'Poppins';
-            z-index: 999;
-            box-shadow: 0 0 10px black;
-        }
-
-        header.scrolled {
-            box-shadow: inset 1.30px 2.25px 3.55px -0.44px rgba(0, 0, 0, 0.15),
-                inset -1.95px -3.38px 3.55px -0.44px rgba(0, 0, 0, 0.3),
-                3.90px 6.75px 2.66px -1.33px rgba(0, 0, 0, 0.6);
-        }
-
-        footer {
-            padding: 0 5%;
-            box-shadow: 0 0 10px black;
-        }
-
-        .nav-second {
-            display: none;
         }
 
         .scrolled .nav-primary {
@@ -47,15 +30,7 @@
             display: flex;
         }
 
-        .burger_menu {
-            display: none;
-        }
-
         .burger_menu .line {
-            width: 25px;
-            height: 4px;
-            background-color: black;
-            margin: 3px 0;
             transition: transform 0.3s ease;
         }
 
@@ -68,45 +43,31 @@
             margin-top: 4px;
         }
 
-        .container_menu {
-            display: none;
-            height: 100vh;
-        }
-
-        .container_menu nav {
-            padding-top: 10px;
-            height: 50%;
-        }
-
-        .container_menu nav a {
-            margin: 10px 0;
-        }
-
         .active_nav_bar {
             display: flex;
             justify-content: space-around;
         }
 
-        .card {
-            /* Autres styles des cartes */
+        .form {
+            clip-path: polygon(20% 0%, 100% 0px, 100% 20%, 100% 80%, 100% 100%, 0px 100%, 40.46% 50.52%, 0px 0px);
+        }
+
+        .table_invoice,
+        .table_contact,
+        .table_companies,
+        .link_home, .faq, .card {
             transition: box-shadow 0.5s ease;
-            /* Ajoute une transition de 0.5 secondes à la propriété box-shadow */
         }
 
-        .show-box-shadow {
-            box-shadow: inset 1.30px 2.25px 3.55px -0.44px rgba(0, 0, 0, 0.15),
-                inset -1.95px -3.38px 3.55px -0.44px rgba(0, 0, 0, 0.3),
-                3.90px 6.75px 2.66px -1.33px rgba(0, 0, 0, 0.6);
+        .paragraph_faq.open {
+            display: block;
         }
 
-        .with-shadow {
-            box-shadow: inset 2.90px 5.02px 7.92px -0.99px rgba(0, 0, 0, 0.15),
-                inset -4.35px -7.53px 7.92px -0.99px rgba(0, 0, 0, 0.3),
-                8.70px 15.07px 5.94px -2.97px rgba(0, 0, 0, 0.6);
+        .paragraph_faq {
+            display: none;
         }
 
         @media screen and (max-width: 1024px) {
-
             .nav-primary,
             .connexion {
                 display: none;
@@ -120,8 +81,9 @@
                 display: none;
             }
         }
+
     </style>
-    <header class="fixed transition-all duration-200 bg-primary-color-orange py-2 w-full">
+    <header class="fixed transition-all duration-200 py-2 w-full z-[999] shadow-[0_0px_10px_rgba(0,0,0,1)] bg-white">
         <div class="flex justify-between items-center mx-10">
             <div class="flex justify-center items-center">
                 <img src="img/image/logo_cojip.png" alt="logo_cojip" width="70" height="70">
@@ -129,36 +91,36 @@
             </div>
 
             <nav class="nav-primary flex space-x-5">
-                <a href="index.php?page=" class="mr-5 text-lg font-bold tracking-widest capitalize hover:text-white">home</a>
-                <a href="index.php?page=invoices-index" class="mr-5 text-lg font-bold tracking-widest capitalize hover:text-white">invoices</a>
-                <a href="index.php?page=companies-index" class="mr-5 text-lg font-bold tracking-widest capitalize hover:text-white">companies</a>
-                <a href="index.php?page=contacts-index" class="mr-5 text-lg font-bold tracking-widest capitalize hover:text-white">contact</a>
+                <a href="index.php?page=" class="mr-5 text-lg font-bold tracking-widest capitalize hover:text-sky-500">home</a>
+                <a href="index.php?page=invoices-index" class="mr-5 text-lg font-bold tracking-widest capitalize hover:text-sky-500">invoices</a>
+                <a href="index.php?page=companies-index" class="mr-5 text-lg font-bold tracking-widest capitalize hover:text-sky-500">companies</a>
+                <a href="index.php?page=contacts-index" class="mr-5 text-lg font-bold tracking-widest capitalize hover:text-sky-500">contact</a>
             </nav>
 
-            <nav class="nav-second flex space-x-5">
+            <nav class="nav-second hidden flex space-x-5">
                 <a href="index.php?page=" class="transition-all duration-200 font-bold tracking-widest capitalize hover:text-white text-2xl"><i class='bx bxs-home'></i></a>
-                <a href="index.php?page=invoices-index" class="transition-all duration-200 mr-5 font-bold tracking-widest capitalize hover:text-white text-2xl"><i class='bx bxs-detail'></i></a>
-                <a href="index.php?page=companies-index" class="transition-all duration-200 mr-5 font-bold tracking-widest capitalize hover:text-white text-2xl"><i class='bx bxs-business'></i></a>
-                <a href="index.php?page=contacts-index" class="transition-all duration-200 mr-5 font-bold tracking-widest capitalize hover:text-white text-2xl"><i class='bx bxs-contact'></i></a>
+                <a href="index.php?page=invoices-index" class="transition-all duration-200 mr-5 font-bold tracking-widest capitalize hover:text-sky-500 text-2xl"><i class='bx bxs-detail'></i></a>
+                <a href="index.php?page=companies-index" class="transition-all duration-200 mr-5 font-bold tracking-widest capitalize hover:text-sky-500 text-2xl"><i class='bx bxs-business'></i></a>
+                <a href="index.php?page=contacts-index" class="transition-all duration-200 mr-5 font-bold tracking-widest capitalize hover:text-sky-500 text-2xl"><i class='bx bxs-contact'></i></a>
             </nav>
 
             <div class="connexion flex">
-                <a href="index.php?page=register" class=" font-bold capitalize tracking-widest text-lg mr-4 px-4 py-2 hover:text-white">sign up</a>
-                <a href="index.php?page=login" class="font-bold capitalize tracking-widest text-lg px-4 py-2 hover:text-white">login</a>
+                <a href="#" class=" font-bold capitalize tracking-widest text-lg mr-4 px-4 py-2 hover:text-sky-500">sign up</a>
+                <a href="#" class="font-bold capitalize tracking-widest text-lg px-4 py-2 hover:text-sky-500">login</a>
             </div>
-            <div class="burger_menu flex flex-col justify-center items-center w-8 h-8 cursor-pointer">
-                <div class="line"></div>
-                <div class="line"></div>
+            <div class="burger_menu hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer">
+                <div class="line w-[25px] h-[4px] my-[3px] my-[3px] mx-0 bg-black"></div>
+                <div class="line w-[25px] h-[4px] my-[3px] mx-0 bg-black"></div>
             </div>
         </div>
-        <div class="container_menu bg-primary-color-orange absolute w-full">
-            <nav class="flex flex-col ">
-                <a href="index.php" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">home</a>
-                <a href="index.php?page=invoices-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">invoices</a>
-                <a href="index.php?page=companies-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">companies</a>
-                <a href="index.php?page=contacts-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white">contact</a>
-                <a href="index.php?page=register" class="text-center font-bold capitalize tracking-widest text-xl hover:text-white">sign up</a>
-                <a href="index.php?page=login" class="text-center font-bold capitalize tracking-widest text-xl hover:text-white">login</a>
+        <div class="container_menu hidden absolute w-full h-[100vh] bg-sky-500/100">
+            <nav class="flex flex-col pt-2.5 h-[50%]">
+                <a href="index.php?page=" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white my-2.5">home</a>
+                <a href="index.php?page=invoices-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white my-2.5">invoices</a>
+                <a href="index.php?page=companies-index" class=" text-center text-xl font-bold tracking-widest capitalize hover:text-white my-2.5">companies</a>
+                <a href="index.php?page=contacts-index" class=" text-center text-xl font-bold tracking-widest capitalize hover:text-white my-2.5">contact</a>
+                <a href="#" class=" text-center font-bold capitalize tracking-widest text-xl hover:text-white my-2.5">sign up</a>
+                <a href="#" class=" text-center font-bold capitalize tracking-widest text-xl hover:text-white my-2.5">login</a>
             </nav>
         </div>
 
