@@ -22,9 +22,9 @@ class UsersController
 
 
             if ($user['role_id'] == 1) {
-                header("Location: View/dashboard/index.php");
+                header("Location: /cogip/dashboard/index.php");
             } else {
-                header("Location: View/sign/login.php");
+                header("Location: /cogip/index.php");
             }
             exit;
         } else {
@@ -33,9 +33,12 @@ class UsersController
             exit;
         }
     }
+
     public function register()
     {
         session_start();
+
+        var_dump($_POST);
         
         $firstname = $_POST['firstname'] ?? '';
         $lastname = $_POST['lastname'] ?? '';
@@ -43,16 +46,15 @@ class UsersController
         $password = $_POST['password'] ?? '';
 
         $registrationSuccessful = $this->userModel->register($firstname, $lastname, $email, $password);
-
+    
         if ($registrationSuccessful) {
-            $_SESSION['success'] = 'Registration successful. You can now log in.';
-            header("Location: View/home.php");
+            header('Location: index.php');
             exit;
         } else {
-            $_SESSION['error'] = 'Registration failed: Email already exists.';
             header("Location: View/sign/register.php");
             exit;
         }
+    
     }
 
     public function logout()

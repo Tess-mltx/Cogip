@@ -26,16 +26,13 @@ require 'Controller/RolesController.php';
 require 'Controller/UsersController.php';
 require 'Controller/DashboardController.php';
 
-// Get the current page to load
 $page = $_GET['page'] ?? null;
 
-// Load the controller
 switch ($page) {
     case 'companies-index':
         (new CompaniesController())->index();
         break;
     case 'compagnies-show':
-        // TODO: detail page
         (new CompaniesController())->show();
         break;
     case 'contacts-index':
@@ -48,13 +45,13 @@ switch ($page) {
         (new InvoicesController())->index();
         break;
     case 'login':
-        (new UsersController($bdd))->login(); // TO CONFIRM
+        (new UsersController($bdd))->login(); 
         break;
     case 'register':
-        (new UsersController($bdd))->register(); // TO CONFIRM
+        (new UsersController($bdd))->register(); 
         break;
     case 'logout':
-        (new UsersController($bdd))->logout(); // TO CONFIRM
+        (new UsersController($bdd))->logout();
         break;
     case 'dashboard':
         (new DashboardController())->index();

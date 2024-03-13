@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <h1 class="title">Register You</h1>
-    <form action="check_register.php" method="post">
+    <form action="/Cogip/index.php?page=register" method="POST">
         <div class="field">
             <label class="label" for="firstname">First Name :</label>
             <div class="control">
@@ -17,9 +17,9 @@
         </div>
 
         <div class="field">
-            <label class="label" for="name">Name :</label>
+            <label class="label" for="lastname">Name :</label>
             <div class="control">
-                <input class="input" type="text" id="name" name="name" required>
+                <input class="input" type="text" id="lastname" name="lastname" required>
             </div>
         </div>
         <div class="field">
@@ -37,7 +37,7 @@
       
         <div class="field">
             <div class="control">
-                <button class="button is-link" type="submit">Register</button>
+                <button type="submit">Register</button>
             </div>
         </div>
     </form>

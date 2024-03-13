@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <h1 class="title">Connexion Admin</h1>
-    <form action="check_login.php" method="post">
+    <form action="index.php?page=login" method="post">
         <div class="field">
             <label class="label" for="username">Utilisateur :</label>
             <div class="control">
