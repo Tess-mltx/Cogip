@@ -93,7 +93,7 @@ class CompaniesController
         $companies = $this->getCompany();
         
         if (!empty($_GET['searchInput'])) {
-            header("Location: index.php?page=dashboard-companies&searchInput={$_GET['searchInput']}");
+            header("Location: cogip.co/index.php?page=dashboard-companies&searchInput={$_GET['searchInput']}");
             exit;
         }
             

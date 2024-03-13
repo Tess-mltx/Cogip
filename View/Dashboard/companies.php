@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <form action="index.php?page=dashboard-companies" method="GET" class="search-section">
+    <form action="Cogip/index.php?page=dashboard-companies" method="GET" class="search-section">
         <label for="searchInput">Recherche par ID ou par Nom :</label>
         <input type="text" id="searchInput" name="searchInput">
         <button type='submit'><i class="fas fa-search"></i> Rechercher</button>
