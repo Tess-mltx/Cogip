@@ -33,6 +33,25 @@
 
     </div>
 
+    <section>
+        <h2>Créer un nouveau contact</h2>
+        <form id="contactForm" action="/cogip/index.php?page=dashboard-contacts" method="POST">
+            <label for="contactName">Nom du contact:</label>
+            <input type="text" id="contactName" name="contactName" required><br>
+
+            <label for="companyID">ID de l'entreprise :</label>
+            <input type="text" id="companyID" name="companyID" required><br>
+
+            <label for="contactPhone">N° de tléphone du contact :</label>
+            <input type="text" id="contactPhone" name="contactPhone" required><br>
+
+            <label for="contactEmail">Adresse email du contact :</label>
+            <input type="text" id="contactEmail" name="contactEmail" required><br>
+
+            <button type="submit" name="button" id="button">Créer le Contact</button>
+        </form>
+    </section>
+
 </body>
 
 </html>

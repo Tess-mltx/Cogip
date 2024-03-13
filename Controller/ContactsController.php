@@ -79,19 +79,32 @@ class ContactsController {
         return($selectedArticles);
     }
 
-    private function postContact()
+    private function postContact($companyID, $email, $phone, $name)
     {
         require 'Connect/Cogip.php';
-
-        $statement = $bdd->prepare(' FROM contacts'); // TO CONFIRM
-        // $statement->execute();
+        $statement = $bdd->prepare('INSERT INTO contacts (company_id, email, phone, name) VALUES (:company_id, :email, :phone, :name)');
+        $statement->execute(array(':company_id' => $companyID, ':email' => $email, ':phone' => $phone, ':name' => $name));
+        if ($statement->rowCount() > 0) {
+            echo "Insertion réussie.";
+            header('Location: /cogip/index.php?page=dashboard-contacts');
+            exit;
+        } else {
+            die("Erreur d'insertion : " . $statement->error);
+        }
 
     }
 
     public function dashboard()
     {
-        // LOGIC TO CORRECT
-        $this->postContact();
+        if ($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+            $companyID = $_POST['companyID'];
+            $name = $_POST['contactName'];
+            $email = $_POST['contactEmail'];
+            $phone = $_POST['contactPhone'];
+
+            $this->postContact($companyID, $email, $phone, $name);
+        }
         require 'View/Dashboard/contact.php' ;
     }
 }

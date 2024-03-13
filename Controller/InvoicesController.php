@@ -64,6 +64,7 @@ class InvoicesController
         $statement->execute(array(':company_id' => $companyID, ':ref' => $ref));
         if ($statement->rowCount() > 0) {
             echo "Insertion réussie.";
+            header('Location: /cogip/index.php?page=dashboard-invoices');
             exit;
         } else {
             die("Erreur d'insertion : " . $statement->error);
