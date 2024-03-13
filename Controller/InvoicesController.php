@@ -60,18 +60,23 @@ class InvoicesController
     private function postInvoices($companyID, $ref)
     {
         require 'Connect/Cogip.php';
-        $statement = $bdd->prepare("INSERT INTO invoices (company_id, ref) VALUES (?, ?)");
-        $statement->bind_param($companyID, $ref);
-        $statement->execute();
+        $statement = $bdd->prepare('INSERT INTO invoices (company_id, ref) VALUES (:company_id, :ref)');
+        $statement->execute(array(':company_id' => $companyID, ':ref' => $ref));
+        if ($statement->rowCount() > 0) {
+            echo "Insertion réussie.";
+            exit;
+        } else {
+            die("Erreur d'insertion : " . $statement->error);
+        }
 
     }
 
     public function dashboard()
     {
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['invoiceNumber']) && isset($_POST['customerName']))
+        if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            $ref = $_POST['customerName'];
-            $companyID = $_POST['invoiceNumber'];
+            $companyID = $_POST['customerName'];
+            $ref = $_POST['invoiceNumber'];
 
             $this->postInvoices($companyID, $ref);
         }

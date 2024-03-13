@@ -35,20 +35,17 @@
     
     <section>
         <h2>Créer une Nouvelle Facture</h2>
-        <form id="invoiceForm" action="" methode="post">
+        <form id="invoiceForm" action="/cogip/index.php?page=dashboard-invoices" method="POST">
             <label for="invoiceNumber">Numéro de Facture :</label>
             <input type="text" id="invoiceNumber" name="invoiceNumber" required><br>
 
             <label for="customerName">Nom du Client :</label>
             <input type="text" id="customerName" name="customerName" required><br>
 
-            <button type="submit">Créer Facture</button>
+            <button type="submit" name="button" id="button">Créer Facture</button>
         </form>
     </section>
 
 </body>
 
 </html>
-<?php
-
-// page du dashboard avec le recap de tout
