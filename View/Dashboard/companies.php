@@ -16,7 +16,7 @@
     <form action="Cogip/index.php?page=dashboard-companies" method="GET" class="search-section">
         <label for="searchInput">Recherche par ID ou par Nom :</label>
         <input type="text" id="searchInput" name="searchInput">
-        <button type='submit'><i class="fas fa-search"></i> Rechercher</button>
+        <button type='submit' id="searchSubmit" name="searchSubmit"><i class="fas fa-search"></i> Rechercher</button>
     </form>
 
     <div class="border border-gray-200 bg-gray-200" id="searchResult">
