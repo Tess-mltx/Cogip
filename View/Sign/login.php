@@ -8,11 +8,11 @@
 <body>
 <div class="container">
     <h1 class="title">Connexion Admin</h1>
-    <form action="index.php?page=login" method="post">
+    <form action="/Cogip/index.php?page=login" method="post">
         <div class="field">
-            <label class="label" for="username">Utilisateur :</label>
+            <label class="label" for="email">Utilisateur :</label>
             <div class="control">
-                <input class="input" type="text" id="username" name="username" required>
+                <input class="input" type="text" id="email" name="email" required>
             </div>
         </div>
 

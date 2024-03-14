@@ -22,9 +22,9 @@ class UsersController
 
 
             if ($user['role_id'] == 1) {
-                header("Location: /cogip/dashboard/index.php");
+                header("Location: /Cogip/View/dashboard/index.php");
             } else {
-                header("Location: /cogip/index.php");
+                header("Location: /Cogip/View/dashboard/index.php");
             }
             exit;
         } else {
@@ -48,9 +48,10 @@ class UsersController
         $registrationSuccessful = $this->userModel->register($firstname, $lastname, $email, $password);
     
         if ($registrationSuccessful) {
-            header('Location: index.php');
+            header("Location: /Cogip/View/dashboard/index.php");
             exit;
         } else {
+            $_SESSION['error'] = 'Registration failed';
             header("Location: View/sign/register.php");
             exit;
         }
