@@ -12,26 +12,31 @@
         <div class="field">
             <label class="label" for="firstname">First Name :</label>
             <div class="control">
-                <input class="input" type="text" id="firstname" name="firstname" required>
+                <input class="input" type="text" id="firstname" name="firstname" oninput="validateFirstName()" required>
+                <div class="text"></div>
+                <div>
             </div>
         </div>
 
         <div class="field">
             <label class="label" for="name">Name :</label>
             <div class="control">
-                <input class="input" type="text" id="name" name="name" required>
+                <input class="input" type="text" id="name" name="name" oninput="validateName()" required>
+                <div class="text"></div>
             </div>
         </div>
         <div class="field">
             <label class="label" for="email">Email :</label>
             <div class="control">
-                <input class="input" type="text" id="email" name="email" required>
+                <input class="input" type="text" id="email" name="email" oninput="validateEmail()" required>
+                <div class="text"></div>
             </div>
         </div>
         <div class="field">
             <label class="label" for="password">Password :</label>
             <div class="control">
-                <input class="input" type="password" id="password" name="password" required>
+                <input class="input" type="password" id="password" name="password" oninput="validatePassword()" required>
+                <div class="text"></div>
             </div>
         </div>
       

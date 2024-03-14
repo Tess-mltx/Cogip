@@ -98,7 +98,7 @@
             </nav>
 
             <nav class="nav-second hidden flex space-x-5">
-                <a href="index.php?page=" class="transition-all duration-200 font-bold tracking-widest capitalize hover:text-white text-2xl"><i class='bx bxs-home'></i></a>
+                <a href="index.php?page=" class="transition-all duration-200 font-bold tracking-widest capitalize hover:text-sky-500 text-2xl"><i class='bx bxs-home'></i></a>
                 <a href="index.php?page=invoices-index" class="transition-all duration-200 mr-5 font-bold tracking-widest capitalize hover:text-sky-500 text-2xl"><i class='bx bxs-detail'></i></a>
                 <a href="index.php?page=companies-index" class="transition-all duration-200 mr-5 font-bold tracking-widest capitalize hover:text-sky-500 text-2xl"><i class='bx bxs-business'></i></a>
                 <a href="index.php?page=contacts-index" class="transition-all duration-200 mr-5 font-bold tracking-widest capitalize hover:text-sky-500 text-2xl"><i class='bx bxs-contact'></i></a>
@@ -117,9 +117,9 @@
             <nav class="flex flex-col pt-2.5 h-[50%]">
                 <a href="index.php?page=" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white my-2.5">home</a>
                 <a href="index.php?page=invoices-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white my-2.5">invoices</a>
-                <a href="index.php?page=companies-index" class=" text-center text-xl font-bold tracking-widest capitalize hover:text-white my-2.5">companies</a>
-                <a href="index.php?page=contacts-index" class=" text-center text-xl font-bold tracking-widest capitalize hover:text-white my-2.5">contact</a>
-                <a href="#" class=" text-center font-bold capitalize tracking-widest text-xl hover:text-white my-2.5">sign up</a>
+                <a href="index.php?page=companies-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white my-2.5">companies</a>
+                <a href="index.php?page=contacts-index" class="text-center text-xl font-bold tracking-widest capitalize hover:text-white my-2.5">contact</a>
+                <a href="#" class="text-center font-bold capitalize tracking-widest text-xl hover:text-white my-2.5">sign up</a>
                 <a href="#" class=" text-center font-bold capitalize tracking-widest text-xl hover:text-white my-2.5">login</a>
             </nav>
         </div>

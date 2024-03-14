@@ -12,14 +12,16 @@
         <div class="field">
             <label class="label" for="username">Utilisateur :</label>
             <div class="control">
-                <input class="input" type="text" id="username" name="username" required>
+                <input class="input" type="text" id="username" name="username" oninput="validateUsername()" required>
+                <div class="text"></div>
             </div>
         </div>
 
         <div class="field">
             <label class="label" for="password">Mot de passe :</label>
             <div class="control">
-                <input class="input" type="password" id="password" name="password" required>
+                <input class="input" type="password" id="password" name="password" oninput="validatePassword()" required>
+                <div class="text"></div>
             </div>
         </div>
 
@@ -30,5 +32,6 @@
         </div>
     </form>
 </div>
+
 </body>
 </html>

@@ -48,7 +48,7 @@ function validateName() {
     }
 }
 
-function ValidateEmail() {
+function validateEmail() {
     let email = document.querySelector('#email').value;
     let text = document.querySelector('#email + .control .text');
     let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
@@ -100,7 +100,9 @@ function formRegisterValidate() {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        validateUsername();
+        validateFirstName();
+        validateName();
+        validateEmail();
         validatePassword();
 
         if (document.querySelectorAll('.invalid').length > 0) {
