@@ -48,7 +48,7 @@ class UsersController
         $registrationSuccessful = $this->userModel->register($firstname, $lastname, $email, $password);
     
         if ($registrationSuccessful) {
-            header("Location: /Cogip/View/dashboard/index.php");
+            header("Location: /Cogip/index.php");
             exit;
         } else {
             $_SESSION['error'] = 'Registration failed';

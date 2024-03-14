@@ -7,10 +7,10 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="title">Connexion Admin</h1>
+    <h1 class="title">Connexion Admin / Users</h1>
     <form action="/Cogip/index.php?page=login" method="post">
         <div class="field">
-            <label class="label" for="email">Utilisateur :</label>
+            <label class="label" for="email">Email :</label>
             <div class="control">
                 <input class="input" type="text" id="email" name="email" required>
             </div>
