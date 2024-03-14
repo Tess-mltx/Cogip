@@ -70,19 +70,37 @@ class CompaniesController
         return $companies;
     }
 
-    private function postCompany()
+    private function getCompany()
     {
         require 'Connect/Cogip.php';
 
-        $statement = $bdd->prepare(' FROM companies'); // TO CONFIRM
-        // $statement->execute();
+        $value = $_GET['searchInput'] ?? '';
 
+        $content = '';
+
+        if (!empty($value)) {
+            $statement = $bdd->prepare("SELECT * FROM companies WHERE id = $value OR name = $value");
+            $statement->execute();
+            $content = $statement->fetch();
+
+        };
+
+        return $content;
     }
 
     public function dashboard()
     {
+        $companies = $this->getCompany();
+        
+        if (!empty($_GET['searchInput'])) {
+            header("Location: cogip.co/index.php?page=dashboard-companies&searchInput={$_GET['searchInput']}");
+            exit;
+        }
+            
+            
         // LOGIC TO CORRECT
-        $this->postCompany();
         require 'View/Dashboard/companies.php' ;
+
+        return $companies;
     }
 }
