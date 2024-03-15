@@ -75,8 +75,8 @@
 
         <div class="flex justify-center items-center">
             <!-- table n°1 : last invoices -->
-            <div class="table_invoice transition-shadow duration-500 ease box-shadow  scroll-shadow-table border border-black overflow-x-auto mx-1 my-3.5 md:mx-0 rounded-lg table-auto">
-                <table class="table-auto">
+           
+                <table class="bg-slate p-8 rounded-lg shadow-md">
                     <thead class="bg-slate-50">
                         <tr>
                             <th class="px-4 py-2.5 border capitalize tracking-widest">invoice number</th>
@@ -95,7 +95,7 @@
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-            </div>
+            
 
         </div>
 
