@@ -22,14 +22,14 @@ class UsersController
 
 
             if ($user['role_id'] == 1) {
-                header("Location: /Cogip/View/dashboard/index.php");
+                header("Location: /Cogip/index.php?page=dashboard");
             } else {
-                header("Location: /Cogip/View/dashboard/index.php");
+                header("Location: /Cogip/index.php?page=dashboard");
             }
             exit;
         } else {
             $_SESSION['error'] = 'Invalid credentials';
-            header("Location: login.php");
+            header("Location: /Cogip/View/sign/login.php");
             exit;
         }
     }
