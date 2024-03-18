@@ -107,7 +107,7 @@
 
             <div class="connexion flex">
                 <a href="index.php?page=register" class=" font-bold capitalize tracking-widest text-lg mr-4 px-4 py-2 hover:text-sky-500">sign up</a>
-                <a href="/Cogip/View/sign/login.php" class="font-bold capitalize tracking-widest text-lg px-4 py-2 hover:text-sky-500">login</a>
+                <a href="index.php?page=login" class="font-bold capitalize tracking-widest text-lg px-4 py-2 hover:text-sky-500">login</a>
             </div>
 
             <div class="burger_menu hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer">
