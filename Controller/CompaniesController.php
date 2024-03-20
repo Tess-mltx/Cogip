@@ -100,20 +100,23 @@ class CompaniesController
         $id = $_POST['searchInput'] ?? '';
 
         if (!empty($name) && !empty($country) && !empty($tva)) {
-            $statement = $bdd->prepare("UPDATE companies SET name = :name, country = :country, tva = :tva WHERE id = :id");
-            $statement->bindParam(':name', $name);
-            $statement->bindParam(':country', $country);
-            $statement->bindParam(':tva', $tva);
-            $statement->bindParam(':id', $id);
-            $statement->execute();
+            $statement = $bdd->prepare("UPDATE companies SET name = :name, country = :country, tva = :tva WHERE id = :id OR name = :name");
+            $statement->execute(array(':country' => $country, ':tva' => $tva, ':id' => $id, ':name' => $name));
 
-            header("Location: index.php?page=dashboard-companies&searchInput=$id");
+            if ($statement->rowCount() > 0) {
+                echo "Mise à jour réussie.";
+                // header("Location: index.php?page=dashboard-companies");
+                exit;
+            } else {
+                die("Erreur d'insertion : " . $statement->error);
+            }
         };
     }
 
     public function dashboard()
     {
         $companies = $this->getCompany();
+
 
         $this->updateCompany();       
             

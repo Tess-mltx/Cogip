@@ -86,7 +86,7 @@ class ContactsController {
         $statement->execute(array(':company_id' => $companyID, ':email' => $email, ':phone' => $phone, ':name' => $name));
         if ($statement->rowCount() > 0) {
             echo "Insertion réussie.";
-            header('Location: /cogip/index.php?page=dashboard-contacts');
+            // header('Location: /cogip/index.php?page=dashboard-contacts');
             exit;
         } else {
             die("Erreur d'insertion : " . $statement->error);
@@ -96,7 +96,7 @@ class ContactsController {
 
     public function dashboard()
     {
-        if ($_SERVER["REQUEST_METHOD"] == "POST")
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['submit'] === 'formblue')
         {
             $companyID = $_POST['companyID'];
             $name = $_POST['contactName'];
